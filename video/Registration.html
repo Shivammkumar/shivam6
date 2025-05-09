@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ChiPi Technologies - Course Registration</title>
+</head>
+<body>
+
+  <h2>ChiPi Technologies - Course Registration</h2>
+
+  <form>
+    <label for="studentName">Student Name:</label><br>
+    <input type="text" id="studentName" name="studentName" placeholder="e.g., Ramesh, Kavya"><br><br>
+
+    <label for="course">Select or Type a Course Name:</label><br>
+    <input list="courseList" id="course" name="course" placeholder="e.g., Java"><br>
+
+    <datalist id="courseList">
+      <option value="Java Programming">
+      <option value="Web Development with HTML, CSS, JS">
+      <option value="React with Projects">
+      <option value="Data Structures and Algorithms">
+      <option value="Python for Beginners">
+      <option value="SQL and Database Design">
+    </datalist><br><br>
+
+    <input type="submit" value="Register">
+    <input type="reset" value="Clear Form">
+  </form>
+
+  <p>&copy; 2025 ChiPi Technologies. All rights reserved.</p>
+
+</body>
+</html>
