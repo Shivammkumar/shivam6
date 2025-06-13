@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ChiPi Technologies - Fieldset Example</title>
+</head>
+<body>
+
+  <h2>ChiPi Technologies - Student Registration</h2>
+
+  <form>
+
+    <!-- Personal Details -->
+    <fieldset>
+      <legend>Personal Details</legend>
+
+      <label for="fullName">Full Name:</label><br>
+      <input type="text" id="fullName" name="fullName" required><br><br>
+
+      <label for="dob">Date of Birth:</label><br>
+      <input type="date" id="dob" name="dob"><br><br>
+
+      <label for="gender">Gender:</label><br>
+      <input type="radio" id="male" name="gender" value="Male"> <label for="male">Male</label><br>
+      <input type="radio" id="female" name="gender" value="Female"> <label for="female">Female</label><br>
+      <input type="radio" id="other" name="gender" value="Other"> <label for="other">Other</label><br><br>
+    </fieldset><br>
+
+    <!-- Course Information -->
+<fieldset>
+      <legend>Course Details</legend>
+    
+      <label for="course">Course Name:</label><br>
+      <select id="course" name="course">
+        <option value="Java Full Stack">Java Full Stack</option>
+        <option value="React with Projects">React with Projects</option>
+        <option value="Python for Beginners">Python for Beginners</option>
+      </select><br><br>
+
+      <label for="batch">Preferred Batch Timing:</label><br>
+      <input type="text" id="batch" name="batch" placeholder="e.g., Weekend Morning"><br><br>
+    </fieldset><br>
+
+    <!-- Contact Information -->
+    <fieldset>
+      <legend>Contact Info</legend>
+
+      <label for="email">Email Address:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="phone">Mobile Number:</label><br>
+      <input type="tel" id="phone" name="phone"><br><br>
+    </fieldset><br>
+
+    <!-- Form Buttons -->
+    <input type="submit" value="Register">
+    <input type="reset" value="Clear Form">
+  </form>
+
+  <p>&copy; 2025 ChiPi Technologies. All rights reserved.</p>
+
+</body>
+</html>

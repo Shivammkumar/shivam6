@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Pseudo-Classes Demo | ChiPi Technologies</title>
+    <link rel="stylesheet" href="UserActionAndInteraction.css">
+</head>
+<body>
+    <h1>CSS Pseudo-Classes - Practical Examples</h1>
+
+    <!-- ========== :hover DEMOS ========== -->
+    <section>
+        <h2>:hover Demo</h2>
+        <button class="hover-btn">Hover over me!</button>
+        <p class="hover-text">Hover over this text!</p>
+        <div class="hover-card">Hover over this card!</div>
+    </section>
+    <hr>
+
+    <!-- ========== :active DEMOS ========== -->
+    <section>
+        <h2>:active Demo</h2>
+        <button class="active-btn">Click and hold me!</button>
+        <a href="#" class="active-link">Click and hold this link!</a>
+        <div class="active-card">Click and hold on this card!</div>
+    </section>
+    <hr>
+
+    <!-- ========== :focus & :focus-visible & :focus-within DEMOS ========== -->
+    <section>
+        <h2>:focus, :focus-visible, :focus-within Demo</h2>
+        <input type="text" class="focus-input" placeholder="Click or tab here">
+        <button class="focus-btn">Tab to focus me</button>
+        <div class="focus-within-box">
+            <label>Type inside me:
+                <input type="text" placeholder="Focus me for parent effect">
+            </label>
+        </div>
+        <input type="text" class="focus-visible-input" placeholder="Tab here for :focus-visible demo">
+    </section>
+    <hr>
+
+    <!-- ========== :enabled & :disabled DEMOS ========== -->
+    <section>
+        <h2>:enabled & :disabled Demo</h2>
+        <input type="text" class="enabled-input" placeholder="I am enabled" enabled >
+        <input type="text" class="disabled-input" placeholder="I am disabled" disabled>
+        <button class="enabled-btn">Enabled Button</button>
+        <button class="disabled-btn" disabled>Disabled Button</button>
+    </section>
+    <hr>
+
+    <!-- ========== :checked DEMO ========== -->
+    <section>
+        <h2>:checked Demo</h2>
+        <input type="checkbox" class="checked-checkbox" id="cb1">
+        <label for="cb1">Check me!</label>
+        <br>
+        <input type="radio" name="radio-demo" class="checked-radio" id="opt1">
+        <label for="opt1">Select me (radio)</label>
+        <input type="radio" name="radio-demo" class="checked-radio" id="opt2">
+        <label for="opt2">Or select me!</label>
+    </section>
+</body>
+</html>

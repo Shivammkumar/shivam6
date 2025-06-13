@@ -1,0 +1,106 @@
+.hover-text:hover {
+    background-color: #d1f7c4;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+.hover-card {
+    padding: 16px;
+    margin-top: 12px;
+    background: #f0f0f0;
+    border-radius: 8px;
+}
+.hover-card:hover {
+    box-shadow: 0 0 16px 2px #2e7d32;
+    background: #e8f5e9;
+}
+
+/* =========================================================================
+   :active Examples
+   ========================================================================= */
+.active-btn:active {
+    background-color: #c62828;
+    color: #fff;
+    border: 2px solid #b71c1c;
+}
+.active-link:active {
+    color: #fff;
+    background: #1976d2;
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+.active-card {
+    padding: 18px;
+    margin-top: 10px;
+    background: #eee;
+    border-radius: 8px;
+}
+.active-card:active {
+    background: #ffccbc;
+    border: 2px solid #ff5722;
+}
+
+/* =========================================================================
+   :focus, :focus-visible, :focus-within Examples
+   ========================================================================= */
+.focus-input:focus {
+    outline: 3px solid #1976d2;
+    background: #e3f2fd;
+}
+.focus-btn:focus {
+    background: #c5e1a5;
+    border: 2px solid #33691e;
+    color: #2e7d32;
+}
+.focus-visible-input:focus-visible {
+    border: 3px dashed #ef6c00;
+    background: #fff3e0;
+}
+.focus-within-box {
+    border: 2px solid #888;
+    padding: 16px;
+    margin-top: 12px;
+    border-radius: 8px;
+}
+.focus-within-box:focus-within {
+    border-color: #0288d1;
+    background: #e1f5fe;
+}
+
+/* =========================================================================
+   :enabled & :disabled Examples
+   ========================================================================= */
+.enabled-input:enabled {
+    border: 2px solid #43a047;
+    background: #f1f8e9;
+}
+.disabled-input:disabled {
+    border: 2px dashed #bdbdbd;
+    background: #3fa825;
+}
+.enabled-btn:enabled {
+    background: #939993;
+    color: #1b5e20;
+}
+.disabled-btn:disabled {
+    background: #b63333;
+    color: #0b16b4;
+}
+
+/* =========================================================================
+   :checked & :indeterminate Examples
+   ========================================================================= */
+.checked-checkbox:checked + label,
+.checked-radio:checked + label {
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+input[type="checkbox"]:checked {
+    outline: 2px solid #fbc02d;
+    box-shadow: 3px 3px 5px 2px #1d0e72;
+}
+
+input[type="radio"]:checked {
+    outline: 2px solid #42a5f5;
+    box-shadow: 0 0 6px 2px #90caf9;
+}

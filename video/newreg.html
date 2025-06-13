@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EV Charging Booking Form</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f1f;
+      padding: 20px;
+    }
+    h2 {
+      text-align: center;
+      color: #ccc
+    }
+    form {
+      max-width: 500px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #3aafa9;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, select {
+      width: 100%;
+      padding: 5px;
+      margin-top: 1px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px;
+      width: 100%;
+      background-color: #3aafa9;
+      color: white;
+      border: none;
+      border-radius: 15px;
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>EV Charging Slot Booking</h2>
+
+  <form action="/submit-booking" method="POST">
+
+    <a href="D:\shivam3\shivam6\video\newreg.html">Click here for New Registration</a>
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" required />
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="vehicleNo">Vehicle Number:</label>
+    <input type="text" id="vehicleNo" name="vehicleNo" required />
+    <label for="name">Create New User ID:</label>
+    <input type="text" id="name" name="name" required /> 
+    <label for="name">Create New Password :</label>
+    <input type="text" id="name" name="name" required />   
+    <label for="station">Select Charging Station:</label>
+    <select id="station" name="station" required>
+      <option value="">--Select Station--</option>
+      <option value="Station A">Station A</option>
+      <option value="Station B">Station B</option>
+      <option value="Station C">Station C</option>
+    </select>
+
+    <label for="slotTime">Preferred Slot Time:</label>
+    <input type="datetime-local" id="slotTime" name="slotTime" required />
+
+    <button type="submit">Book Slot</button>
+  </form>
+
+</body>
+</html>

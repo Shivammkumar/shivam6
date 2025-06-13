@@ -1,0 +1,27 @@
+a:link {
+    color: #a10d0d;
+    text-decoration: underline;
+    background-color: #e3f2fd;
+    font-weight: bold;
+    border-bottom: 2px solid #64b5f6;
+    transition: color 0.3s;
+}
+
+/* =========================
+   :visited Examples (visited)
+   ========================= */
+a:visited {
+    color: #4a148c;
+    background-color: #ede7f6;
+    text-decoration: line-through;
+    border-bottom: 2px dotted #7e57c2;
+}
+
+/* =========================
+   Just for fun
+   ========================= */
+a:hover {
+    color: #fff;
+    background-color: #1565c0;
+    text-decoration: none;
+}

@@ -1,0 +1,36 @@
+/^ -> It means starts with/
+        a[href^="http"]{
+            color: rgb(0, 128, 66);
+        }
+        /* - It means ends with*/
+        a[href$=".jpeg"]{
+            font-size: 50px;
+        }
+
+        /* * -> Search for the value specified*/
+        a[href*="images"]{
+            background-color: rgb(255, 0, 0);
+        }
+
+        input[type="button"]{
+            color: blue;
+            background-color: rgb(0, 255, 76);
+        }
+
+        input[type="text"]{
+            color: rgb(0, 0, 0);
+            background-color: rgb(128, 128, 128);
+        }
+
+        div[data-role="admin"]{
+            color: rgb(2, 28, 10);
+            background-color: rgb(0, 255, 55);
+        }
+        div[data-role="user"]{
+            color: rgb(162, 255, 0);
+            background-color: rgb(123, 0, 255);
+        }
+        div[data-role="guest"]{
+            color: red;
+            background-color: blue;
+        }

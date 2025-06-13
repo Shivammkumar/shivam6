@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EV Charging Admin Form</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: rgb(17, 255, 17);
+      padding: 20px;
+    }
+    h2 {
+      text-align: center;
+      color: #000;
+    }
+    form {
+      max-width: 500px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgb(25, 17, 255);
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px;
+      width: 100%;
+      background-color: #3aafa9;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>EV Charging Admin</h2>
+
+  <form action="/submit-booking" method="POST">
+
+    
+    <label for="name">Admin ID:</label>
+    <input type="text" id="name" name="name" required />
+    
+    <label for="email">Name:</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="vehicleNo">Email ID:</label>
+    <input type="text" id="vehicleNo" name="vehicleNo" required />
+    <label for="name">Phone Number:</label>
+    <input type="text" id="name" name="name" required /> 
+    <label for="name"> Password :</label>
+    <input type="text" id="name" name="name" required />   
+    <label for="vehicleNo">Role:</label>
+    <input type="text" id="vehicleNo" name="vehicleNo" required />
+    
+    <button type="submit">Book Slot</button>
+    <a href="newreg.html">Click here for New Registration</a>
+  </form>
+  
+
+
+
+</body>
+</html>
