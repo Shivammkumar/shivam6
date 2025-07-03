@@ -1,0 +1,102 @@
+.demo-is :is(.is-text, .is-div, .is-article, .is-list li) {
+  background: #e3f2fd;
+  color: #0d47a1;
+  border-left: 5px solid #2196f3;
+  margin-bottom: 6px;
+  padding: 4px;
+}
+.demo-is .is-span {
+  background: none;
+  color: #af5151;
+  border: none;
+}
+
+/* =========================================================================
+   :not() DEMOS — Only targets elements with .not-btn/.not-input/.not-box but NOT .not-special or .not-exclude
+   ========================================================================= */
+.demo-not .not-btn:not(.not-special) {
+  background: #fff3e0;
+  color: #ff9800;
+  border: 2px solid #ffb300;
+  margin-right: 8px;
+}
+.demo-not .not-input:not([type="password"]) {
+  background: #f1f8e9;
+  border: 2px solid #43a047;
+  color: #33691e;
+}
+.demo-not .not-box:not(.not-exclude) {
+  background: #b3e5fc;
+  border: 2px solid #345faf;
+  width: 70px;
+  height: 40px;
+  margin: 8px 0;
+  display: inline-block;
+}
+.demo-not .not-box.not-exclude {
+  background: #470101;
+  border: 2px solid #8726d6;
+}
+
+/* =========================================================================
+   :where() — Only targets .demo-where and its specific children
+   ========================================================================= */
+:where(.demo-where .where-link, .demo-where .where-btn) {
+  background: #fce4ec;
+  color: #ad1457;
+  border-bottom: 2px solid #e91e63;
+  margin: 4px 0;
+  padding: 2px 6px;
+  display: inline-block;
+}
+:where(.demo-where .where-aside-text) {
+  border-left: 4px dashed #ad1457;
+  padding-left: 7px;
+}
+.demo-where .where-box {
+  background: #e0bebe;
+  color: #666;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+}
+
+/* =========================================================================
+   :has() — Only targets .demo-has and its specific children
+   ========================================================================= */
+.demo-has .has-div:has(span) {
+  background: #dcedc8;
+  border: 2px solid #689f38;
+  color: #33691e;
+  padding: 8px;
+  margin-bottom: 6px;
+}
+.demo-has .has-div:not(:has(span)) {
+  background: #f5f5f5;
+  color: #bdbdbd;
+  border: 2px dashed #bdbdbd;
+  padding: 8px;
+  margin-bottom: 6px;
+}
+.demo-has .has-ul li:has(input) {
+  background: #b2ebf2;
+  border: 2px dashed #00838f;
+  color: #006064;
+}
+.demo-has .has-ul li:not(:has(input)) {
+  background: #fafafa;
+  color: #757575;
+  border: 1px solid #e0e0e0;
+}
+.demo-has .has-form .has-label:has(input[type="checkbox"]:checked) {
+  color: #2e7d32;
+  font-weight: bold;
+  border-bottom: 2px solid #43a047;
+  padding-bottom: 2px;
+}
+.demo-has .has-parent {
+  background: #fbe9e7;
+  color: #b71c1c;
+  border: 2px dotted #ff7043;
+  padding: 10px;
+  margin-top: 10px;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Logical Pseudo-Classes | ChiPi Technologies</title>
+  <link rel="stylesheet" href="Logical.css">
+</head>
+<body>
+  <h1>Logical Pseudo-Classes - No Style Overlap</h1>
+
+  <!-- ========== :is() ========== -->
+  <section class="demo-is">
+    <h2>:is()</h2>
+    <p class="is-text">Paragraph using :is()</p>
+    <div class="is-div">Div using :is()</div>
+    <article class="is-article">Article using :is()</article>
+    <span class="is-span">Span (not included in :is selector, not styled)</span>
+    <ul class="is-list">
+      <li>List 1 using :is()</li>
+      <li>List 2 using :is()</li>
+    </ul>
+    <ol class="is-list">
+      <li>Ordered 1 using :is()</li>
+      <li>Ordered 2 using :is()</li>
+    </ol>
+  </section>
+  <hr>
+
+  <!-- ========== :not() ========== -->
+  <section class="demo-not">
+    <h2>:not()</h2>
+    <button class="not-btn">Button with :not()</button>
+    <button class="not-btn not-special">Button NOT styled (has not-special class)</button>
+    <input type="text" class="not-input" placeholder="Text Input with :not()">
+    <input type="password" class="not-input" placeholder="Password Input NOT styled">
+    <div class="not-box"></div>
+    <div class="not-box not-exclude"></div>
+  </section>
+  <hr>
+
+  <!-- ========== :where() ========== -->
+  <section class="demo-where">
+    <h2>:where()</h2>
+    <nav class="where-nav">
+      <ul>
+        <li class="where-item"><a href="#" class="where-link">Nav Home</a></li>
+        <li class="where-item"><a href="#" class="where-link">Nav About</a></li>
+        <li class="where-item"><button class="where-btn">Nav Button</button></li>
+      </ul>
+    </nav>
+    <aside class="where-aside">
+      <p class="where-aside-text">Aside content styled by :where()</p>
+      <button class="where-btn">Aside Button styled by :where()</button>
+    </aside>
+    <footer class="where-footer">
+      <a href="#" class="where-link">Footer Link styled by :where()</a>
+    </footer>
+    <div class="where-box">Div not targeted by :where()</div>
+  </section>
+  <hr>
+
+  <!-- ========== :has() (Best in Chrome/Edge/Safari) ========== -->
+  <section class="demo-has">
+    <h2>:has()</h2>
+    <div class="has-div">
+      <span>Has a span child (parent styled by :has())</span>
+    </div>
+    <div class="has-div">
+      <strong>Has a strong child (not styled)</strong>
+    </div>
+    <div class="has-div">
+      <span>First span</span>
+      <span>Second span</span>
+    </div>
+    <ul class="has-ul">
+      <li>Simple item</li>
+      <li><span>Has span inside</span></li>
+      <li>Just text</li>
+      <li><input type="checkbox"></li>
+    </ul>
+    <form class="has-form">
+      <label class="has-label">
+        <input type="checkbox" checked> Checked (label styled)
+      </label>
+      <label class="has-label">
+        <input type="checkbox"> Not checked (label not styled)
+      </label>
+    </form>
+    <div class="has-parent">
+      No span child here (not styled)
+    </div>
+  </section>
+</body>
+</html>
