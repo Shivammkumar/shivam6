@@ -1,0 +1,113 @@
+/* backgroundimage.css */
+/*==============================================================================
+  ChiPi Technologies 
+==============================================================================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e8f0fe;
+  color: #333;
+  line-height: 1.4;
+}
+
+.site-header {
+  background-color: #1a73e8;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/*==============================================================================
+  Base container (stacked)
+==============================================================================*/
+.container {
+  width: 90%;
+  max-width: 700px;
+  margin: 1rem auto;
+  padding: 1rem;
+  border: 3px solid #1a73e8;
+  border-radius: 6px;
+  min-height: 500px;
+  color: #1a73e8;
+  position: relative;
+}
+
+/*==============================================================================
+  background-image: none
+==============================================================================*/
+.bg-none-1 { background-image: none; }
+.bg-none-2 { background-image: none; }
+.bg-none-3 { background-image: none; }
+
+/*==============================================================================
+  background-image: url(...)
+==============================================================================*/
+.bg-url-1 {
+  background-image: url('../../Images/555555.jpg');
+}
+.bg-url-2 {
+  background-image: url('../../Images/image1.jpg');
+}
+.bg-url-3 {
+  background-image: url('https://chipitechnologies.com/static/media/homeimg.924d645c72144c1cfddf.png');
+}
+
+/*==============================================================================
+  background-image: gradient-functions
+==============================================================================*/
+/* linear-gradient */
+.bg-grad-linear {
+  background-image: linear-gradient(
+    to right,
+    #1a73e8,
+    yellow );
+}
+
+/* radial-gradient */
+.bg-grad-radial {
+  background-image: radial-gradient(
+    circle at center,
+    #1a73e8,
+    #e8f0fe
+  );
+}
+
+/* repeating-linear-gradient */
+.bg-grad-repeating {
+  background-image: repeating-linear-gradient(
+    120deg,
+    #1a73e8 0,
+    #e8f0fe 100px,
+    #1a73e8 200px
+  );
+}
+
+/*==============================================================================
+  Combined gradient & image layering
+==============================================================================*/
+.bg-gradient-only {
+  background-image: linear-gradient(
+    to right,
+    #1a73e8,
+    #e8f0fe
+  );
+}
+
+.bg-gradient-over-image {
+  background-image:
+    linear-gradient(rgba(26,115,232,0.6), rgba(232,240,254,0.6)),
+    url('/images/download2.jpeg');
+}
+
+.bg-image-over-gradient {
+  background-image:
+    url('/images/download12.jpeg'),
+    radial-gradient(circle at center, #1a73e8, #e8f0fe);
+  background-repeat: no-repeat;
+}

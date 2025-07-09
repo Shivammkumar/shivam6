@@ -1,0 +1,78 @@
+<!-- backgroundimage.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ChiPi Technologies – background-image Samples</title>
+  <link rel="stylesheet" href="backgroundimage.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>ChiPi Technologies</h1>
+    <p>Demonstrating <code>background-image</code> Values</p>
+  </header>
+
+  <!-- 1. NONE -->
+  <section class="container bg-none-1">
+    <h2>background-image: none;</h2>
+  </section>
+  <section class="container bg-none-2">
+    <h2>background-image: none;</h2>
+  </section>
+  <section class="container bg-none-3">
+    <h2>background-image: none;</h2>
+  </section>
+
+  <!-- 2. URL(...) -->
+  <section class="container bg-url-1">
+    <h2>background-image: url(...download2.jpeg);</h2>
+  </section>
+  <section class="container bg-url-2">
+    <h2>background-image: url(...download12.jpeg);</h2>
+  </section>
+  <section class="container bg-url-3">
+    <h2>background-image: url(https://chipitechnologies.com/static/media/homeimg.924d645c72144c1cfddf.png);</h2>
+  </section>
+
+  <!-- 3. GRADIENT-FUNCTION -->
+  <section class="container bg-grad-linear">
+    <h2>background-image: linear-gradient(...);</h2>
+  </section>
+  <section class="container bg-grad-radial">
+    <h2>background-image: radial-gradient(...);</h2>
+  </section>
+  <section class="container bg-grad-repeating">
+    <h2>background-image: repeating-linear-gradient(...);</h2>
+  </section>
+  <!-- 1. Gradient Only -->
+  <section class="container bg-gradient-only">
+    <h2>Gradient Only</h2>
+    <p><code>background-image: linear-gradient(to right, var(--brand-color), var(--brand-light));</code></p>
+  </section>
+
+  <!-- 2. Gradient Over a Photo -->
+  <section class="container bg-gradient-over-image">
+    <h2>Gradient Over Image</h2>
+    <p>
+      <code>
+        background-image: <br>
+        &nbsp;&nbsp;linear-gradient(rgba(26,115,232,0.6), rgba(232,240,254,0.6)),<br>
+        &nbsp;&nbsp;url('../images/download2.jpeg');
+      </code>
+    </p>
+  </section>
+
+  <!-- 3. Photo Over a Gradient -->
+  <section class="container bg-image-over-gradient">
+    <h2>Image Over Gradient</h2>
+    <p>
+      <code>
+        background-image: <br>
+        &nbsp;&nbsp;url('../images/download12.jpeg'),<br>
+        &nbsp;&nbsp;radial-gradient(circle at center, var(--brand-color), var(--brand-light));
+      </code>
+    </p>
+  </section>
+</body>
+</html>

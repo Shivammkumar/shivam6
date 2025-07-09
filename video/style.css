@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f0f0f0;
+}
+
+.resume-container {
+  display: flex;
+  max-width: 900px;
+  margin: 30px auto;
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.left-section {
+  width: 35%;
+  background-color: #1e2a38;
+  color: white;
+  padding: 20px;
+}
+
+.profile-pic img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 20px;
+  border: 3px solid #fff;
+}
+
+.contact-info {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.section {
+  margin-top: 30px;
+}
+
+.section h2 {
+  font-size: 16px;
+  color: #f9c74f;
+  border-bottom: 1px solid #f9c74f;
+  padding-bottom: 5px;
+}
+
+.section p, .section ul {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.right-section {
+  width: 65%;
+  padding: 30px;
+}
+
+.right-section h1 {
+  color: #1e2a38;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.right-section h2 {
+  color: #f9c74f;
+  font-size: 18px;
+  margin-top: 25px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 5px;
+}
+
+ul {
+  list-style: disc;
+  padding-left: 20px;
+}
