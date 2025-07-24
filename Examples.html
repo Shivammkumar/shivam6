@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Property Examples</title>
+    <link rel="stylesheet" href="../Images/Satyam.css">
+</head>
+<body>
+<div>
+    <p>The display property in CSS controls how an HTML 
+        element is displayed on the page. Each value of 
+        the display property has specific use cases.
+    </p>
+</div>    
+
+<!-- Block Level Element -->
+<div class="block">Block Level Element (Default)
+    <p>
+        Block-level elements stack on top of each other and 
+        stretch the full width of their container. Common 
+        block-level elements include div, p, h1 to h6, 
+        and ul, ol, li.
+    </p>
+</div>
+<!-- Inline Level Element -->
+<div>
+    <p>Inline elements do not start on a new line and only 
+        take up as much width as necessary. 
+        Common inline elements include span, a, 
+        strong
+    
+        <span class="inline">Inline Level Element</span>
+    </p>
+</div>
+<!-- Inline-Block Level Element -->
+<div >
+    <p> Inline-block combines features of both block and 
+        inline. It allows elements to flow inline like inline 
+        elements, but you can set their width, height, margin, 
+        and padding like block-level elements. Useful for 
+        creating grid layouts or arranging elements horizontally.
+        <span class="inline-block">Inline-Block Level Element</span>
+    </p>
+</div>
+<!-- None - Hidden Element -->
+<div>
+    <p>The none value hides the element, making it 
+        invisible and removing it from the layout. This 
+        is commonly used for toggling visibility based on 
+        certain conditions, such as in JavaScript for 
+        showing/hiding elements dynamically.
+    </p>
+</div>
+<div class="none">This element is hidden (display: none)</div>
+
+<!-- Flex Container -->
+<div class="flex-container">
+    <p>Flexbox is a layout model designed for 
+        one-dimensional layouts. It's used to create 
+        flexible and responsive layouts with easy 
+        alignment and distribution of space among items 
+        in a container. Great for building navigation 
+        bars, sidebars, or any flexible layout.</p>
+    <div class="block">Flex Item 1</div>
+    <div class="block">Flex Item 2</div>
+    <div class="block">Flex Item 3</div>
+</div>
+
+<!-- Grid Container -->
+<div>
+    <p>CSS Grid is a two-dimensional layout system that 
+        allows you to create complex grid-based layouts 
+        with rows and columns. It's powerful for creating 
+        overall page structure, especially for web 
+        applications and complex websites.
+    </p>
+</div>
+<div class="grid-container">
+    <div class="block">Grid Item 1</div>
+    <div class="block">Grid Item 2</div>
+    <div class="block">Grid Item 3</div>
+</div>
+
+<!-- Table Element -->
+<div class="table">
+    <div class="table-row">
+        <div class="table-cell">Table Cell 1</div>
+        <div class="table-cell">Table Cell 2</div>
+        <div class="table-cell">Table Cell 3</div>
+    </div>
+</div>
+
+</body>
+</html>

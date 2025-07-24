@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+/* Common styles for demonstration */
+div {
+    border: 1px solid #333;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* Specific styles for display values */
+.block {
+    display: block;
+}
+
+.inline {
+    display: inline;
+}
+
+.inline-block {
+    display: inline-block;
+    line-height: 30px;
+    width: 150px;
+    margin: 50px;
+    height: 100px;
+}
+
+.none {
+    display: none;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.table {
+    display: table;
+}
+
+.table-row {
+    display: table-row;
+}
+
+.table-cell {
+    display: table-cell;
+    border: 1px solid #999;
+    padding: 5px;
+}
+
+p::first-line {
+    font-weight: bold;
+}
