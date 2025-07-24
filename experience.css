@@ -1,0 +1,370 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* General Styling */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #121212;
+  color: #ffffff;
+  padding: 1rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* ---------------- Navigation Bar ---------------- */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  background-color: #181818;
+  border-bottom: 2px solid #333;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.navbar a {
+  color: #00ffc3;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  border: 1px solid transparent;
+}
+
+.navbar a:hover {
+  background-color: #2c2c2c;
+  border-color: #00ffc3;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+h2 {
+  color: #00ffc3;
+}
+
+.container-section {
+  margin: 2rem 0;
+  border: 1px solid #333;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #1e1e1e;
+}
+
+.box-container {
+  border: 1px dashed #555;
+  padding: 1rem;
+
+  /* Default display set to flex */
+  display: flex;  
+  gap: 1rem;
+  background-color: #2c2c2c;
+
+  /* Items do not wrap by default */
+  flex-wrap: nowrap; 
+  min-height: 100px;
+
+  /* Items aligned at the start of the container */
+  justify-content: flex-start; 
+
+  /* Items stretched to fill the container */
+  align-items: stretch;
+  
+  /* Items arranged in a row (default) */
+  flex-direction: row; 
+}
+
+.box {
+  background-color: #4caf50;
+  color: white;
+  padding: 1rem;
+  min-width: 80px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+/* Without Flex (default behavior) */
+.no-flex {
+  /* Default display is block, no flex applied */
+  display: block; 
+}
+
+.no-flex .box {
+  /* Items behave like inline-blocks */
+  display: inline-block; 
+}
+
+/* display: inline-flex */
+/* Items behave like inline elements, but with flex properties */
+.inline {
+  display: inline-flex; 
+}
+
+.inline-flex-container {
+  /* Container behaves like inline-block but with flex properties */
+  display: inline-flex; 
+}
+
+/* flex-direction variations */
+.flex-row {
+  /* Items arranged horizontally (default) */
+  flex-direction: row; 
+}
+
+.flex-row-reverse {
+  /* Items arranged in reverse horizontal order */
+  flex-direction: row-reverse; 
+}
+
+.flex-column {
+  /* Items arranged vertically */
+  flex-direction: column; 
+}
+
+.flex-column-reverse {
+  /* Items arranged in reverse vertical order */
+  flex-direction: column-reverse; 
+}
+
+/* flex-wrap variations */
+.wrap {
+  /* Items wrap onto new lines if space is tight */
+  flex-wrap: wrap; 
+}
+
+.nowrap {
+  /* Items stay in one line and overflow if necessary (default) */
+  flex-wrap: nowrap; 
+}
+
+.wrap-reverse {
+  /* Items wrap onto new lines, but in reverse order */
+  flex-wrap: wrap-reverse; 
+}
+
+/* justify-content variations */
+.justify-flex-start {
+  /* Items aligned to the start of the main axis (default) */
+  justify-content: flex-start; 
+}
+
+.justify-flex-end {
+  /* Items aligned to the end of the main axis */
+  justify-content: flex-end; 
+}
+
+.justify-center {
+  /* Items aligned to the center of the main axis */
+  justify-content: center; 
+}
+
+.justify-space-between {
+  /* Items spaced out, first and last item at the ends */
+  justify-content: space-between; 
+}
+
+.justify-space-around {
+  /* Items spaced out with equal space around each item */
+  justify-content: space-around; 
+}
+
+.justify-space-evenly {
+  /* Items spaced out with equal space between and around each item */
+  justify-content: space-evenly; 
+}
+
+/* align-items variations */
+.align-stretch {
+  /* Items stretched to fill the container's cross-axis */
+  align-items: stretch; 
+}
+
+.align-flex-start {
+  /* Items aligned to the start of the cross axis */
+  align-items: flex-start; 
+}
+
+.align-flex-end {
+  /* Items aligned to the end of the cross axis */
+  align-items: flex-end; 
+}
+
+.align-center {
+  /* Items aligned to the center of the cross axis */
+  align-items: center; 
+}
+
+.align-baseline {
+  /* Items aligned to the baseline of the container */
+  align-items: baseline; 
+}
+
+/* align-content variations (needs flex-wrap and height) */
+.align-content-start {
+  /* Multiple lines aligned to the start of the cross axis */
+  align-content: flex-start; 
+}
+
+.align-content-end {
+  /* Multiple lines aligned to the end of the cross axis */
+  align-content: flex-end; 
+}
+
+.align-content-center {
+  /* Multiple lines aligned to the center of the cross axis */
+  align-content: center; 
+}
+
+.align-content-between {
+  /* Multiple lines spaced out, first and last line at the ends */
+  align-content: space-between; 
+}
+
+.align-content-around {
+  /* Multiple lines spaced out with equal space around each line */
+  align-content: space-around; 
+}
+
+.align-content-stretch {
+  /* Multiple lines stretched to fill the container's cross-axis */
+  align-content: stretch; 
+}
+
+.align-content-section .box-container {
+  flex-wrap: wrap;
+  /* Container height needs to be defined for align-content to work */
+  height: 200px; 
+}
+
+/* order variations */
+.order-box1 {
+  /* The order of Box 1 is set to 3 */
+  order: 3; 
+}
+.order-box2 {
+  /* The order of Box 2 is set to 1 */
+  order: 1; 
+}
+.order-box3 {
+  /* The order of Box 3 is set to 2 */
+  order: 2; 
+}
+
+/* flex-grow variations */
+.grow-0 {
+  /* Item will not grow, it will maintain its size */
+  flex-grow: 0; 
+}
+.grow-1 {
+  /* Item can grow to take up available space */
+  flex-grow: 1; 
+}
+.grow-2 {
+  /* Item will grow twice as much as other items with flex-grow: 1 */
+  flex-grow: 2; 
+}
+
+/* flex-shrink variations */
+.shrink-section .box-container {
+  /* Fixed width for container to show flex-shrink behavior */
+  width: 600px; 
+}
+.shrink-0 {
+  /* Item will not shrink, even if space is tight */
+  flex-shrink: 0; 
+  width: 200px;
+  background-color: #f44336; 
+}
+.shrink-1 {
+  /* Item can shrink to fit the container */
+  flex-shrink: 1; 
+  width: 300px;
+  background-color: #3f51b5; 
+}
+
+.shrink-2 {
+  /* Item can shrink to fit the container */
+  flex-shrink: 2; 
+  width: 300px;
+  background-color: #3f51b5; 
+}
+
+/* flex-basis variations */
+.basis-100 {
+  /* Item will start with a size of 100px */
+  flex-basis: 100px; 
+  flex-grow:1;
+}
+.basis-200 {
+  /* Item will start with a size of 200px */
+  flex-basis: 200px; 
+  flex-grow: 2;
+}
+.basis-auto {
+  /* Item will size based on its content */
+  flex-basis: auto; 
+}
+
+/* flex shorthand variations */
+.flex-shorthand-1 {
+  /* flex-grow: 1, flex-shrink: 0, flex-basis: 100px */
+  flex: 1 0 100px; 
+}
+.flex-shorthand-2 {
+  /* flex-grow: 2, flex-shrink: 1, flex-basis: 150px */
+  flex: 2 1 150px; 
+}
+
+/* align-self variations */
+.self-auto {
+  /* Default behavior (inherits from container) */
+  /* Inherits from the container's align-items setting */
+  align-self: auto; 
+}
+
+.self-start {
+  /* Item aligned to the start of the cross axis */
+  align-self: flex-start; 
+}
+
+.self-end {
+  /* Item aligned to the end of the cross axis */
+  align-self: flex-end; 
+}
+
+.self-center {
+  /* Item aligned to the center of the cross axis */
+  align-self: center; 
+}
+
+.self-baseline {
+  /* Item aligned to the baseline */
+  align-self: baseline; 
+}
+
+.self-stretch {
+  /* Item stretched to fill the container's cross-axis */
+  align-self: stretch; 
+}
+
+.tall-container .box-container {
+  /* Container height needs to be defined for align-self to work */
+  height: 150px; 
+  align-items: stretch;
+}
+
+.tall {
+  /* Fixed height for demonstration */
+  /* Setting a fixed height to visually demonstrate the layout */
+  height: 100px; 
+}

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shivam Technologies - Flexbox Complete Demo</title>
+  <link rel="stylesheet" href="./experience.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Shivam Technologies - Flexbox Properties Showcase</h1>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="#display">Display</a>
+    <a href="#flex-direction">Flex Direction</a>
+    <a href="#flex-wrap">Flex Wrap</a>
+    <a href="#justify-content">Justify Content</a>
+    <a href="#align-items">Align Items</a>
+    <a href="#align-content">Align Content</a>
+    <a href="#order">Order</a>
+    <a href="#flex-grow">Flex Grow</a>
+    <a href="#flex-shrink">Flex Shrink</a>
+    <a href="#flex-basis">Flex Basis</a>
+    <a href="#flex-shorthand">Flex Shorthand</a>
+    <a href="#align-self">Align Self</a>
+  </nav>
+
+  <!-- Display Flex & Inline-Flex -->
+  <section id="display" class="container-section">
+    <h2>display: flex vs inline-flex</h2>
+    <div class="box-container">
+      <div class="box">Flex</div>
+      <div class="box">Box</div>
+    </div>
+    <div class="box-container inline-flex-container">
+      <div>ChiPi Technologies </div>
+      <div class="box">Inline</div>
+      <div class="box">Flex</div>
+    </div>
+  </section>
+
+  <!-- flex-direction -->
+  <section id="flex-direction" class="container-section">
+    <h2>flex-direction: row | row-reverse | column | column-reverse</h2>
+    <div class="box-container flex-row">
+      <div class="box">Row 1</div>
+      <div class="box">Row 2</div>
+      <div class="box">Row 3</div>
+      <div class="box">Row 4</div>
+    </div>
+    <div class="box-container flex-row-reverse">
+      <div class="box">Rev 1</div>
+      <div class="box">Rev 2</div>
+      <div class="box">Rev 3</div>
+      <div class="box">Rev 4</div>
+    </div>
+    <div class="box-container flex-column">
+      <div class="box">Col 1</div>
+      <div class="box">Col 2</div>
+      <div class="box">Col 3</div>
+      <div class="box">Col 4</div>
+    </div>
+    <div class="box-container flex-column-reverse">
+      <div class="box">CR 1</div>
+      <div class="box">CR 2</div>
+      <div class="box">CR 3</div>
+      <div class="box">CR 4</div>
+    </div>
+  </section>
+
+  <!-- flex-wrap -->
+  <section id="flex-wrap" class="container-section">
+    <h2>flex-wrap: nowrap | wrap | wrap-reverse</h2>
+    <div class="box-container nowrap">
+      <div class="box">No</div>
+      <div class="box">Wrap</div>
+      <div class="box">Here</div>
+      <div class="box">!!</div>
+    </div>
+    <div class="box-container wrap">
+      <div class="box">Yes</div>
+      <div class="box">Wrap</div>
+      <div class="box">Possible</div>
+      <div class="box">Now</div>
+    </div>
+    <div class="box-container wrap-reverse">
+      <div class="box">WR</div>
+      <div class="box">Re</div>
+      <div class="box">Ver</div>
+      <div class="box">se</div>
+    </div>
+  </section>
+
+  <!-- justify-content -->
+  <section id="justify-content" class="container-section">
+    <h2>justify-content: All values</h2>
+    <div class="box-container justify-flex-start">
+      <div class="box">Start</div>
+      <div class="box">Start</div>
+    </div>
+    <div class="box-container justify-flex-end">
+      <div class="box">End</div>
+      <div class="box">End</div>
+    </div>
+    <div class="box-container justify-center">
+      <div class="box">Center</div>
+      <div class="box">Center</div>
+    </div>
+    <div class="box-container justify-space-between">
+      <div class="box">Between</div>
+      <div class="box">Items</div>
+    </div>
+    <div class="box-container justify-space-around">
+      <div class="box">Around</div>
+      <div class="box">Space</div>
+    </div>
+    <div class="box-container justify-space-evenly">
+      <div class="box">Evenly</div>
+      <div class="box">Spread</div>
+    </div>
+  </section>
+
+  <!-- align-items -->
+  <section id="align-items" class="container-section">
+    <h2>align-items: Understand all the values</h2>
+    <div class="box-container align-stretch">
+      <div class="box">Stretch</div>
+      <div class="box">Stretch</div>
+    </div>
+    <div class="box-container align-flex-start">
+      <div class="box tall">Start</div>
+      <div class="box">Start</div>
+    </div>
+    <div class="box-container align-flex-end">
+      <div class="box tall">End</div>
+      <div class="box">End</div>
+    </div>
+    <div class="box-container align-center">
+      <div class="box tall">Center</div>
+      <div class="box">Center</div>
+    </div>
+    <div class="box-container align-baseline">
+      <div class="box baseline">Text</div>
+      <div class="box">Baseline</div>
+    </div>
+  </section>
+
+  <!-- align-content -->
+  <section id="align-content" class="container-section align-content-section">
+    <h2>align-content: All values</h2>
+    <div class="box-container align-content-start">
+      <div class="box">A</div>
+      <div class="box">B</div>
+      <div class="box">C</div>
+      <div class="box">D</div>
+      <div class="box">E</div>
+      <div class="box">F</div>
+    </div>
+    <div class="box-container align-content-end">
+      <div class="box">A</div>
+      <div class="box">B</div>
+      <div class="box">C</div>
+      <div class="box">D</div>
+      <div class="box">E</div>
+      <div class="box">F</div>
+    </div>
+    <div class="box-container align-content-center">
+      <div class="box">Center</div><div class="box">Center</div><div class="box">Center</div><div class="box">Center</div><div class="box">Center</div><div class="box">Center</div>
+    </div>
+    <div class="box-container align-content-between">
+      <div class="box">Between</div><div class="box">Between</div><div class="box">Between</div><div class="box">Between</div><div class="box">Between</div><div class="box">Between</div>
+    </div>
+    <div class="box-container align-content-around">
+      <div class="box">Around</div><div class="box">Around</div><div class="box">Around</div><div class="box">Around</div><div class="box">Around</div><div class="box">Around</div>
+    </div>
+    <div class="box-container align-content-stretch">
+      <div class="box">Stretch</div><div class="box">Stretch</div><div class="box">Stretch</div><div class="box">Stretch</div><div class="box">Stretch</div><div class="box">Stretch</div>
+    </div>
+  </section>
+
+  <!-- order -->
+  <section id="order" class="container-section">
+    <h2>order: Changing Visual Order</h2>
+    <div class="box-container">
+      <div class="box order-box1">Box 1 (Order 3)</div>
+      <div class="box order-box2">Box 2 (Order 1)</div>
+      <div class="box order-box3">Box 3 (Order 2)</div>
+    </div>
+  </section>
+
+  <!-- flex-grow -->
+  <section id="flex-grow" class="container-section">
+    <h2>flex-grow: 0 | 1 | 2</h2>
+    <div class="box-container">
+      <div class="box grow-0">Grow 0</div>
+      <div class="box grow-1">Grow 1</div>
+      <div class="box grow-2">Grow 2</div>
+    </div>
+  </section>
+
+  <section id="flex-grow" class="container-section">
+    <h2>flex-grow: 0 | 1 </h2>
+    <div class="box-container">
+      <div class="box grow-0">Grow 0</div>
+      <div class="box grow-1">Grow 1</div>
+    </div>
+  </section>
+
+  <!-- flex-shrink -->
+  <section id="flex-shrink" class="container-section shrink-section">
+    <h2>flex-shrink: 0 | 1 | 2</h2>
+    <div class="box-container">
+      <div class="box shrink-0">Shrink 0</div>
+      <div class="box shrink-1">Shrink 1</div>
+      <div class="box shrink-2">Shrink 2</div>
+    </div>
+  </section>
+
+  <section id="flex-shrink" class="container-section shrink-section">
+    <h2>flex-shrink: 0 | 1 </h2>
+    <div class="box-container">
+      <div class="box shrink-0">Shrink 0</div>
+      <div class="box shrink-1">Shrink 1</div>
+    </div>
+  </section>
+
+  <!-- flex-basis -->
+  <section id="flex-basis" class="container-section">
+    <h2>flex-basis: 100px | 200px | auto</h2>
+    <div class="box-container">
+      <div class="box basis-100">Basis 100px</div>
+      <div class="box basis-200">Basis 200px</div>
+      <div class="box basis-auto">Auto flex-basis: auto - Basis Auto</div>
+    </div>
+  </section>
+
+  <!-- flex shorthand -->
+  <section id="flex-shorthand" class="container-section">
+    <h2>flex: grow shrink basis</h2>
+    <div class="box-container">
+      <div class="box flex-shorthand-1">1 0 100px</div>
+      <div class="box flex-shorthand-2">2 1 150px</div>
+    </div>
+  </section>
+
+  <!-- align-self -->
+  <section id="align-self" class="container-section tall-container">
+    <h2>align-self: auto | flex-start | flex-end | center | baseline | stretch</h2>
+    <div class="box-container">
+      <div class="box self-auto">Auto</div>
+      <div class="box self-start tall">Start</div>
+      <div class="box self-end tall">End</div>
+      <div class="box self-center tall">Center</div>
+      <div class="box self-baseline">Baseline</div>
+      <div class="box self-stretch">Stretch</div>
+    </div>
+  </section>
+
+</body>
+</html>
