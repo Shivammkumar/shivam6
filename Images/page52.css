@@ -1,0 +1,162 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0f172a;
+  color: #ffffff;
+}
+
+header {
+  background-color: #1e293b;
+  padding: 15px 20px;
+  border-bottom: 1px solid #334155;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav h2 {
+  margin: 0;
+  color: #38bdf8;
+}
+
+.nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+.container {
+  display: flex;
+  padding: 20px;
+}
+
+.main-content {
+  flex: 3;
+  padding-right: 20px;
+}
+
+.main-content h1 {
+  color: #facc15;
+}
+
+.author {
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+.highlight {
+  color: #22d3ee;
+}
+
+.sidebar {
+  flex: 1;
+  background-color: #1e293b;
+  padding: 15px;
+  border-left: 2px solid #334155;
+}
+
+.ad-box, .event-box, .ebook-box {
+  background-color: #334155;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.ad-box h3, .event-box h4, .ebook-box h4 {
+  color: #fb2432;
+}
+
+button {
+  background-color: #0ee966;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav h2 {
+  color: #38bdf8;
+  margin: 0;
+}
+
+.nav a {
+  color: #cbd5e1;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 14px;
+}
+
+.content {
+  padding: 30px;
+}
+
+h2 {
+  color: #60a5fa;
+}
+
+h3 {
+  color: #7415fa;
+  margin-top: 20px;
+}
+
+ul {
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+ body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0b0b2d;
+      color: white;
+      padding: 20px;
+    }
+
+    h2 {
+      color: #00bfff;
+    }
+
+    .step {
+      margin-bottom: 20px;
+    }
+
+    .code-box {
+      background-color: #1e1e3f;
+      border-left: 4px solid #00bfff;
+      padding: 10px;
+      margin: 10px 0;
+      font-family: monospace;
+      white-space: pre-wrap;
+      color: #2a095c;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .tip {
+      color: #4400ff;
+      font-style: italic;
+    }
+
+    .section-title {
+      color: #00ffff;
+      font-weight: bold;
+    }
+  
+
+

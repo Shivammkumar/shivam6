@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mastering GRANT & REVOKE in Oracle Database</title>
+  <link rel="stylesheet" href="Images/page52.css">
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <h2>C# Corner</h2>
+      <nav>
+        <a href="#">Tech</a>
+        <a href="#">News</a>
+        <a href="#">Videos</a>
+        <a href="#">Jobs</a>
+        <a href="#">Books</a>
+        <a href="#">Events</a>
+        <a href="#">More</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <main class="main-content">
+      <h1>Mastering GRANT & REVOKE in Oracle Database (DCL)</h1>
+      <p class="author">Shivam kumar | 3w ago | 👁️ 855 views</p>
+
+      <h2>Introduction</h2>
+      <p>In Oracle Database, DCL (Data Control Language) commands are essential for managing user access and database security.</p>
+
+      <ul>
+        <li><strong>GRANT</strong> – To assign privileges to users or roles.</li>
+        <li><strong>REVOKE</strong> – <span class="highlight">To remove privileges</span> from users or roles.</li>
+      </ul>
+
+      <p>These commands control access to:</p>
+      <ul>
+        <li>Tables</li>
+        <li>Views</li>
+        <li>Procedures</li>
+        <li>Other database objects</li>
+      </ul>
+      <h2>1. What is GRANT in Oracle?</h2>
+    <p>The <strong>GRANT</strong> command is used to give users or roles specific privileges on database objects.</p>
+
+    <h3>Common Privileges:</h3>
+    <ul>
+      <li><strong>SELECT</strong> — Read data from tables.</li>
+      <li><strong>INSERT</strong> — Add new records.</li>
+      <li><strong>UPDATE</strong> — Modify existing records.</li>
+      <li><strong>DELETE</strong> — Remove records.</li>
+      <li><strong>CONNECT</strong> — Allow user login.</li>
+      <li><strong>RESOURCE</strong> — Allow creation of tables, views, etc.</li>
+    </ul>
+
+    <h2>2. What is REVOKE in Oracle?</h2>
+    <p>The <strong>REVOKE</strong> command removes previously granted privileges from users or roles.</p>
+
+    <h2>3. How to Create a User and Grant Privileges (Step-by-Step)</h2>
+    <h2>Step 1: Create New User</h2>
+  <div class="code-box">
+    CREATE USER c##SANDHIYA IDENTIFIED BY Admin;
+  </div>
+
+  <h2>Step 2: Grant Basic Access (Login & Resource Use)</h2>
+  <div class="code-box">
+    GRANT CONNECT, RESOURCE TO c##SANDHIYA;
+  </div>
+  <ul>
+    <li><b>CONNECT</b> → Allows user to log in.</li>
+    <li><b>RESOURCE</b> → Allows user to create tables, views, etc.</li>
+  </ul>
+
+  <h2>Step 3: Grant Privileges on Specific Table</h2>
+  <div class="code-box">
+1  GRANT SELECT ON EMP_IND TO c##SANDHIYA;<br>
+2  GRANT INSERT, UPDATE, DELETE ON EMP_IND TO c##SANDHIYA;
+  </div>
+  <p class="tip">Tip: Always grant the least amount of privileges necessary for the task.</p>
+
+  <h2>Step 4: Revoke Privileges from a User</h2>
+  <p class="section-title">Revoke SELECT Privilege Only</p>
+  <div class="code-box">
+    REVOKE SELECT ON EMP_IND FROM c##SANDHIYA;
+  </div>
+
+</body>
+</html>
+    
+    </main>
+
+    <aside class="sidebar">
+      <div class="ad-box">
+        <h3>Prompt Engineer Training</h3>
+        <p>Now Only $199 (67% Off)</p>
+        <button>Enroll Today</button>
+      </div>
+
+      <div class="event-box">
+        <h4>Upcoming Events</h4>
+        <ul>
+          <li>Aug 5 - Architecture Conference</li>
+          <li>Aug 31 - Empowering Government</li>
+        </ul>
+      </div>
+
+      <div class="ebook-box">
+        <h4>Ebook Download</h4>
+        <p>Unboxing .NET Aspire</p>
+        <button>Download Now</button>
+      </div>
+      
+
+    
+    </aside>
+  </div>
+  
+</body>
+</html>

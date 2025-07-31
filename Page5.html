@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ChiPi Technologies - CSS Grid Showcase</title>
+  <link rel="stylesheet" href="../Images/GlobalStyles2.css">
+</head>
+<body>
+  <header class="site-header">-
+    <h1>ChiPi Technologies</h1>
+    <p>CSS Grid Property Demonstrations</p>
+  </header>
+
+  <!-- Each Section will be inserted here -->
+  <main class="grid-showcase">
+
+    <!-- Display Grid -->
+    <section class="grid-section display-grid">
+      <h2>Display Grid</h2>
+      <div class="grid-container">
+        <div class="grid-item">ChiPi</div>
+        <div class="grid-item">Technologies</div>
+        <div class="grid-item">Grid 1</div>
+        <div class="grid-item">Box 4</div>
+        <div class="grid-item">Box 5</div>
+      </div>
+    </section>
+
+    <section class="grid-section display-grid">
+      <h2>Display Grid - Display Grid Example1</h2>
+      <div class="grid-container display-grid-example1">
+        <div class="grid-item">ChiPi</div>
+        <div class="grid-item">Technologies</div>
+        <div class="grid-item">Grid 1</div>
+        <div class="grid-item">Box 4</div>
+        <div class="grid-item">Box 5</div>
+      </div>
+    </section>
+
+    <section class="grid-section display-grid">
+      <h2>Display Grid</h2>
+      <div class="grid-container display-grid-example">
+        <div class="grid-item">ChiPi</div>
+        <div class="grid-item">Technologies</div>
+        <div class="grid-item">Grid 1</div>
+        <div class="grid-item">Box 4</div>
+        <div class="grid-item">Box 5</div>
+
+      </div>
+    </section>
+    
+    <!-- Template Columns -->
+    <section class="grid-section template-columns">
+      <h2>Template Columns - Fixed Columns</h2>
+      <div class="grid-container cols-fixed">
+        <div class="grid-item">ChiPi</div>
+        <div class="grid-item">Technologies</div>
+        <div class="grid-item">Grid 2</div>
+        <div class="grid-item">Grid 3</div>
+      </div>
+    </section>
+
+    <section class="grid-section template-columns">
+      <h2>Template Columns - fr - Fractional</h2>
+      <div class="grid-container cols-fr">
+        <div class="grid-item">ChiPi</div>
+        <div class="grid-item">Technologies</div>
+        <div class="grid-item">Grid 2</div>
+      </div>
+    </section>
+
+    <section class="grid-section template-columns">
+      <h2>Template Columns - Repeat Columns</h2>
+      <div class="grid-container cols-repeat">
+        <div class="grid-item">ChiPi</div>
+        <div class="grid-item">Techn ologies</div>
+        <div class="grid-item">Grid 2</div>
+        <div class="grid-item">Grid 4</div>
+      </div>
+    </section>
+
+    <section class="grid-section grid-template">
+      <h2>Grid Template - Unit: px (pixels)</h2>
+      <div class="grid-container grid-px">
+        <div class="grid-item">100px</div>
+        <div class="grid-item">200px</div>
+        <div class="grid-item">100px</div>
+      </div>
+    </section>
+
+        <section class="grid-section grid-template">
+      <h2>Grid Template - Unit: px (pixels) - 4 Columns</h2>
+      <div class="grid-container grid-px-4cols">
+        <div class="grid-item">This</div>
+        <div class="grid-item">is</div>
+        <div class="grid-item">Test</div>
+        <div class="grid-item">This is Box of 100px</div>
+      </div>
+    </section>
+
+    <section class="grid-section grid-template">
+      <h2>Unit: fr (fraction)</h2>
+      <div class="grid-container grid-fr">
+        <div class="grid-item">1fr</div>
+        <div class="grid-item">2fr</div>
+        <div class="grid-item">1fr</div>
+        <div class="grid-item">1fr</div>
+        <div class="grid-item">2fr</div>
+        <div class="grid-item">1fr</div>
+      </div>
+    </section>
+
+    <section class="grid-section grid-template">
+      <h2>Unit: auto</h2>
+      <div class="grid-container grid-auto">
+        <div class="grid-item">Short</div>
+        <div class="grid-item">Longer content</div>
+        <div class="grid-item">Shortest</div>
+      </div>
+    </section>
+
+    <section class="grid-section grid-template">
+      <h2>Unit: auto - Bigger content</h2>
+      <div class="grid-container grid-auto">
+        <div class="grid-item">I am testing the behaviour of auto column size</div>
+        <div class="grid-item">Longer content</div>
+        <div class="grid-item">Shortest</div>
+      </div>
+    </section>
+
+    <section class="grid-section grid-template">
+      <h2>Unit: % (percent)</h2>
+      <div class="grid-container grid-percent">
+        <div class="grid-item">50%</div>
+        <div class="grid-item">50%</div>
+      </div>
+    </section>
+
+    <section class="grid-section grid-template">
+      <h2>Unit: % (percent) - 3 Columns - 25% 50% 25%</h2>
+      <div class="grid-container grid-percent-3cols">
+        <div class="grid-item">25%</div>
+        <div class="grid-item">50%</div>
+        <div class="grid-item">25%</div>
+      </div>
+    </section>    
+
+    <section class="grid-section grid-template">
+      <h2>Unit: % (percent) - 5 Columns - 20% each</h2>
+      <div class="grid-container grid-percent-5cols container-yellow-color">
+        <div class="grid-item">20%</div>
+        <div class="grid-item">20%</div>
+        <div class="grid-item">20%</div>
+        <div class="grid-item">20%</div>
+        <div class="grid-item">20%</div>        
+      </div>
+    </section>    
+
+
+    <section class="grid-section grid-template">
+      <h2>Unit: em/rem</h2>
+      <div class="grid-container grid-em">
+        <div class="grid-item">20em</div>
+        <div class="grid-item">30em</div>
+      </div>
+    </section>
+
+    <section class="grid-section grid-template">
+      <h2>Unit: min-content</h2>
+      <div class="grid-container grid-min-content">
+        <div class="grid-item">Min</div>
+        <div class="grid-item">LongestUnbreakableWordWithoutSpaces</div>
+      </div>
+    </section>
+
+    <section class="grid-section grid-template">
+      <h2>Unit: min-content - With fixed column size</h2>
+      <div class="grid-container grid-min-content-with-fixed">
+        <div class="grid-item">Min</div>
+        <div class="grid-item">LongestUnbreakableWordWithoutSpaces</div>
+        <div class="grid-item">Column with 200px</div>
+      </div>
+    </section>
+
+
+    <section class="grid-section grid-template">
+      <h2>Unit: max-content</h2>
+      <div class="grid-container grid-max-content">
+        <div class="grid-item">This is a large content cell that wraps</div>
+        <div class="grid-item">Short</div>
+      </div>
+    </section>
+
+    <section class="grid-section grid-template">
+      <h2>Unit: minmax()</h2>
+      <div class="grid-container grid-minmax">
+        <div class="grid-item">Min 100px, Max 1fr</div>
+        <div class="grid-item">Min 100px, Max 1fr</div>
+        <div class="grid-item">Min 100px, Max 1fr</div>
+      </div>
+    </section>
+
+    <section class="grid-section grid-template">
+      <h2>Unit: repeat()</h2>
+      <div class="grid-container grid-repeat">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+      </div>
+    </section>
+
+    <section class="grid-section grid-template">
+      <h2>Unit: fit-content()</h2>
+      <div class="grid-container grid-fit-content">
+        <div class="grid-item">fit-content(200px)</div>
+        <div class="grid-item">Flexible</div>
+      </div>
+    </section>
+
+    <section class="grid-section grid-template">
+      <h2>Only one Fractional column</h2>
+      <div class="grid-container grid-one-fractional-column">
+        <div class="grid-item">It uses the entire width based on it's container <br> It uses the entire width based on it's container</div>
+        <div class="grid-item">Flexible</div>
+      </div>
+    </section>
+    
+
+    
+    <!-- Template Rows -->
+    <section class="grid-section template-rows">
+      <h2>Template Rows - Fixed rows</h2>
+      <div class="grid-container rows-fixed">
+        <div class="grid-item">ChiPi</div>
+        <div class="grid-item">Technologies</div>
+        <div class="grid-item">Grid 3</div>
+      </div>
+    </section>
+
+    <section class="grid-section template-rows">
+      <h2>Template Rows - Auto</h2>
+      <div class="grid-container rows-auto">
+        <div class="grid-item">ChiPi</div>
+        <div class="grid-item">Technologies</div>
+        <div class="grid-item">Grid 3</div>
+      </div>
+    </section>
+
+    <!-- Section: Pixels -->
+    <section class="grid-section">
+      <h2>Row Units – px (Fixed Pixels)</h2>
+      <div class="grid-container grid-rows-px">
+        <div class="grid-item">Row 1: 100px</div>
+        <div class="grid-item">Row 2: 150px</div>
+        <div class="grid-item">Row 3: 200px</div>
+      </div>
+    </section>
+
+    <!-- Section: Fractional (fr) -->
+    <section class="grid-section">
+      <h2>Row Units – fr (Fractional)</h2>
+      <div class="grid-container rows-fr">
+        <div class="grid-item">1fr</div>
+        <div class="grid-item">3fr</div>
+        <div class="grid-item">1fr</div>
+      </div>
+    </section>
+
+    <!-- Section: auto -->
+    <section class="grid-section">
+      <h2>Row Units – auto</h2>
+      <div class="grid-container grid-rows-auto">
+        <div class="grid-item">Content-aware height</div>
+        <div class="grid-item">More content<br>adds more height</div>
+        <div class="grid-item">Short again</div>
+      </div>
+    </section>
+
+    <!-- Section: minmax -->
+    <section class="grid-section">
+      <h2>Row Units – minmax()</h2>
+      <div class="grid-container grid-rows-minmax">
+        <div class="grid-item">Min 100px<br>Max 1fr</div>
+        <div class="grid-item">Min 150px<br>Max 2fr</div>
+        <div class="grid-item">Min 100px<br>Max 1fr</div>
+      </div>
+    </section>
+
+    <section class="grid-section template-rows">
+      <h2>Template Rows - Fix rows and columns</h2>
+      <div class="grid-container cols-fixed rows-fixed">
+        <div class="grid-item">ChiPi</div>
+        <div class="grid-item">Technologies</div>
+        <div class="grid-item">Grid 3</div>
+        <div class="grid-item">ChiPi</div>
+        <div class="grid-item">Technologies</div>
+        <div class="grid-item">Grid 3</div>
+        <div class="grid-item">ChiPi</div>
+        <div class="grid-item">Technologies</div>
+        <div class="grid-item">Grid 3</div>
+      </div>
+    </section>
+
+    <section class="grid-section template-rows">
+      <h2>Template Rows - Fractional rows and columns</h2>
+      <div class="grid-container cols-fr rows-fr">
+        <div class="grid-item">ChiPi</div>
+        <div class="grid-item">Technologies</div>
+        <div class="grid-item">Grid 3</div>
+        <div class="grid-item">ChiPi</div>
+        <div class="grid-item">Technologies</div>
+        <div class="grid-item">Grid 3</div>
+        <div class="grid-item">ChiPi</div>
+        <div class="grid-item">Technologies</div>
+        <div class="grid-item">Grid 3</div>
+      </div>
+    </section>
+    
+     <!-- Simple Header/Main/Footer -->
+    <section class="grid-section">
+      <h2>Header / Main / Footer</h2>
+      <div class="grid-area-1 grid-container">
+        <div class="header grid-item">Header</div>
+        <div class="main grid-item">Main</div>
+        <div class="footer grid-item">Footer</div>
+      </div>
+    </section>
+
+    <!-- Header with Sidebar and Main -->
+    <section class="grid-section">
+      <h2>Header / Sidebar / Main</h2>
+      <div class="grid-area-2 grid-container">
+        <div class="header grid-item">Header</div>
+        <div class="sidebar grid-item">Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar Sidebar </div>
+        <div class="main grid-item">Main</div>
+      </div>
+    </section>
+
+    <!-- Dashboard Layout -->
+    <section class="grid-section">
+      <h2>Dashboard Layout</h2>
+      <div class="grid-area-3 grid-container">
+        <div class="nav grid-item">Nav</div>
+        <div class="main grid-item">Main</div>
+        <div class="aside grid-item">Aside</div>
+        <div class="footer grid-item">Footer</div>
+      </div>
+    </section>
+
+    <!-- 2x2 Grid with Named Cells -->
+    <section class="grid-section">
+      <h2>2x2 Grid (A, B, C, D)</h2>
+      <div class="grid-area-4 grid-container">
+        <div class="a grid-item">A</div>
+        <div class="b grid-item">B</div>
+        <div class="c grid-item">C</div>
+        <div class="d grid-item">D</div>
+      </div>
+    </section>
+
+    <!-- Overlapping Header -->
+    <section class="grid-section">
+      <h2>Overlapping Header</h2>
+      <div class="grid-area-5 grid-container">
+        <div class="header grid-item">Header</div>
+        <div class="left grid-item">Left</div>
+        <div class="right grid-item">Right</div>
+        <div class="footer grid-item">Footer</div>
+      </div>
+    </section>
+
+    <!-- Complex Admin Layout -->
+    <section class="grid-section">
+      <h2>Complex Admin Panel</h2>
+      <div class="grid-area-6 grid-container">
+        <div class="topbar grid-item">Topbar</div>
+        <div class="menu grid-item">Menu</div>
+        <div class="content grid-item">Content</div>
+        <div class="widgets grid-item">Widgets</div>
+        <div class="footer grid-item">Footer</div>
+      </div>
+    </section>
+    
+    <!-- Auto Columns -->
+    <section class="grid-section">
+      <h2>grid-auto-columns</h2>
+      <div class="grid-container auto-columns-example">
+        <div class="grid-item">Row 1, Col 1</div>
+        <div class="grid-item">Row 2, Col 1</div>
+        <div class="grid-item">Row 3, Col 1</div>
+        <div class="grid-item">Row 4, Col 1</div>
+        <div class="grid-item">Row 5, Col 1</div>
+        <div class="grid-item">Row 6, Col 1</div>
+        <div class="grid-item">Row 7, Col 1</div>
+        <div class="grid-item">Row 8, Col 1</div>
+        <div class="grid-item">Row 9, Col 1</div>
+      </div>
+    </section>
+
+    <!-- grid-auto-rows -->
+    <section class="grid-section">
+      <h2>grid-auto-rows</h2>
+      <div class="grid-container auto-rows-example">
+        <div class="grid-item">Column 1, Row 1</div>
+        <div class="grid-item">Column 2, Row 1</div>
+        <div class="grid-item">Column 3, Row 1</div>
+        <div class="grid-item">Column 1, Row 2</div>
+        <div class="grid-item">Column 2, Row 2</div>
+        <div class="grid-item">Column 3, Row 2</div>
+        <div class="grid-item">Column 1, Row 2</div>
+        <div class="grid-item">Column 2, Row 2</div>
+        <div class="grid-item">Column 3, Row 2</div>
+        <div class="grid-item">Column 1, Row 2</div>
+        <div class="grid-item">Column 2, Row 2</div>
+        <div class="grid-item">Column 3, Row 2</div>
+        <div class="grid-item">Column 1, Row 2</div>
+        <div class="grid-item">Column 2, Row 2</div>
+        <div class="grid-item">Column 3, Row 2</div>                
+      </div>
+    </section>
+
+    <!-- grid-auto-flow: row -->
+    <section class="grid-section">
+      <h2>grid-auto-flow: row</h2>
+      <p>This fills rows first, creating new rows when needed.</p>
+      <div class="grid-container auto-flow-row">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>        
+      </div>
+    </section>
+
+    <!-- grid-auto-flow: column -->
+    <section class="grid-section">
+      <h2>grid-auto-flow: column</h2>
+      <p>This fills columns first, creating new columns when needed.</p>
+      <div class="grid-container auto-flow-column">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+      </div>
+    </section>
+
+    <!-- Layout 1 -->
+    <section class="grid-section">
+      <h2>Layout 1</h2>
+      <div class="grid-container grid-layout-1">
+        <div class="item-header grid-box">Header</div>
+        <div class="item-main grid-box">Main Content</div>
+        <div class="item-sidebar grid-box">Sidebar</div>
+        <div class="item-footer grid-box">Footer</div>
+      </div>
+    </section>
+
+    <!-- Layout 2 -->
+    <section class="grid-section">
+      <h2>Layout 2</h2>
+      <div class="grid-container grid-layout-2">
+        <div class="item-header grid-box">Header</div>
+        <div class="item-sidebar grid-box">Sidebar</div>
+        <div class="item-main grid-box">Main Content</div>
+        <div class="item-footer grid-box">Footer</div>
+      </div>
+    </section>
+
+    <!-- Layout 3 -->
+    <section class="grid-section">
+      <h2>Layout 3</h2>
+      <div class="grid-layout-3 grid-container">
+        <div class="item-header grid-box">Header</div>
+        <div class="item-sidebar grid-box">Sidebar</div>
+        <div class="item-main grid-box">Main Content</div>
+      </div>
+    </section>
+
+    <!-- Layout 4 -->
+    <section class="grid-section">
+      <h2>Layout 4</h2>
+      <div class="grid-layout-4 grid-container">
+        <div class="item-header grid-box">Header</div>
+        <div class="item-main grid-box">Main Content</div>
+        <div class="item-sidebar grid-box">Sidebar</div>
+      </div>
+    </section>
+
+    <!-- Layout 5 -->
+    <section class="grid-section">
+      <h2>Layout 5</h2>
+      <div class="grid-layout-5 grid-container">
+        <div class="item-header grid-box">Header</div>
+        <div class="item-main grid-box">Main Content</div>
+        <div class="item-footer grid-box">Footer</div>
+      </div>
+    </section>
+
+    <!-- Layout 6 -->
+    <section class="grid-section">
+      <h2>Layout 6</h2>
+      <div class="grid-layout-6 grid-container">
+        <div class="item-header grid-box">Header</div>
+        <div class="item-main grid-box">Main Content</div>
+        <div class="item-footer grid-box">Footer</div>
+        <div class="item-sidebar grid-box">Sidebar</div>
+      </div>
+    </section>
+</main>
+</body>
+</html>

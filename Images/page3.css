@@ -1,0 +1,52 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #121212;
+  color: #ffffff;
+}
+
+header {
+  background-color: #1e1e1e;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 2px solid #333;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 26px;
+  color: #00bfff;
+}
+
+header p {
+  margin: 5px;
+  font-size: 16px;
+}
+
+.author {
+  color: #aaaaaa;
+  font-style: italic;
+}
+
+.introduction {
+  padding: 20px;
+  line-height: 1.6;
+}
+
+.introduction h2 {
+  color: #00ffff;
+}
+
+ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+footer {
+  background-color: #1e1e1e;
+  text-align: center;
+  padding: 10px;
+  margin-top: 30px;
+  border-top: 1px solid #444;
+  color: #777;
+}

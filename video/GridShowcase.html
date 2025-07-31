@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ChiPi Technologies - CSS Grid Showcase</title>
+  <link rel="stylesheet" href="../Images/GlobalStyles2.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>ChiPi Technologies</h1>
+    <p>CSS Grid Property Demonstrations</p>
+  </header>
+
+  <!-- Each Section will be inserted here -->
+  <main class="grid-showcase">
+
+    <!-- Display Grid -->
+    <section class="grid-section display-grid">
+      <h2>Display Grid</h2>
+      <div class="grid-container">
+        <div class="grid-item">ChiPi</div>
+        <div class="grid-item">Technologies</div>
+        <div class="grid-item">Grid 1</div>
+        <div class="grid-item">Box 4</div>
+        <div class="grid-item">Box 5</div>
+      </div>
+    </section>
+
+    <section class="grid-section display-grid">
+      <h2>Display Grid - Display Grid Example1</h2>
+      <div class="grid-container display-grid-example1">
+        <div class="grid-item">ChiPi</div>
+        <div class="grid-item">Technologies</div>
+        <div class="grid-item">Grid 1</div>
+        <div class="grid-item">Box 4</div>
+        <div class="grid-item">Box 5</div>
+      </div>
+    </section>
+
+    <section class="grid-section display-grid">
+      <h2>Display Grid</h2>
+      <div class="grid-container display-grid-example">
+        <div class="grid-item">ChiPi</div>
+        <div class="grid-item">Technologies</div>
+        <div class="grid-item">Grid 1</div>
+        <div class="grid-item">Box 4</div>
+        <div class="grid-item">Box 5</div>
+
+      </div>
+    </section>
+    
+    <!-- Template Columns -->
+    <section class="grid-section template-columns">
+      <h2>Template Columns - Fixed Columns</h2>
+      <div class="grid-container cols-fixed">
+        <div class="grid-item">ChiPi</div>
+        <div class="grid-item">Technologies</div>
+        <div class="grid-item">Grid 2</div>
+        <div class="grid-item">Grid 3</div>
+      </div>
+    </section>
+
+    <section class="grid-section template-columns">
+      <h2>Template Columns - fr - Fractional</h2>
+      <div class="grid-container cols-fr">
+        <div class="grid-item">ChiPi</div>
+        <div class="grid-item">Technologies</div>
+        <div class="grid-item">Grid 2</div>
+      </div>
+    </section>
+
+    <section class="grid-section template-columns">
+      <h2>Template Columns - Repeat Columns</h2>
+      <div class="grid-container cols-repeat">
+        <div class="grid-item">ChiPi</div>
+        <div class="grid-item">Techn ologies</div>
+        <div class="grid-item">Grid 2</div>
+        <div class="grid-item">Grid 4</div>
+      </div>
+    </section>
+
+    <section class="grid-section grid-template">
+      <h2>Grid Template - Unit: px (pixels)</h2>
+      <div class="grid-container grid-px">
+        <div class="grid-item">100px</div>
+        <div class="grid-item">200px</div>
+        <div class="grid-item">100px</div>
+      </div>
+    </section>
+
+        <section class="grid-section grid-template">
+      <h2>Grid Template - Unit: px (pixels) - 4 Columns</h2>
+      <div class="grid-container grid-px-4cols">
+        <div class="grid-item">This</div>
+        <div class="grid-item">is</div>
+        <div class="grid-item">Test</div>
+        <div class="grid-item">This is Box of 100px</div>
+      </div>
+    </section>
+
+    <section class="grid-section grid-template">
+      <h2>Unit: fr (fraction)</h2>
+      <div class="grid-container grid-fr">
+        <div class="grid-item">1fr</div>
+        <div class="grid-item">2fr</div>
+        <div class="grid-item">1fr</div>
+        <div class="grid-item">1fr</div>
+        <div class="grid-item">2fr</div>
+        <div class="grid-item">1fr</div>
+      </div>
+    </section>
+
+    <section class="grid-section grid-template">
+      <h2>Unit: auto</h2>
+      <div class="grid-container grid-auto">
+        <div class="grid-item">Short</div>
+        <div class="grid-item">Longer content</div>
+        <div class="grid-item">Shortest</div>
+      </div>
+    </section>
+
+    <section class="grid-section grid-template">
+      <h2>Unit: auto - Bigger content</h2>
+      <div class="grid-container grid-auto">
+        <div class="grid-item">I am testing the behaviour of auto column size</div>
+        <div class="grid-item">Longer content</div>
+        <div class="grid-item">Shortest</div>
+      </div>
+    </section>
+
+    <section class="grid-section grid-template">
+      <h2>Unit: % (percent)</h2>
+      <div class="grid-container grid-percent">
+        <div class="grid-item">50%</div>
+        <div class="grid-item">50%</div>
+      </div>
+    </section>
+
+    <section class="grid-section grid-template">
+      <h2>Unit: % (percent) - 3 Columns - 25% 50% 25%</h2>
+      <div class="grid-container grid-percent-3cols">
+        <div class="grid-item">25%</div>
+        <div class="grid-item">50%</div>
+        <div class="grid-item">25%</div>
+      </div>
+    </section>    
+
+    <section class="grid-section grid-template">
+      <h2>Unit: % (percent) - 5 Columns - 20% each</h2>
+      <div class="grid-container grid-percent-5cols container-yellow-color">
+        <div class="grid-item">20%</div>
+        <div class="grid-item">20%</div>
+        <div class="grid-item">20%</div>
+        <div class="grid-item">20%</div>
+        <div class="grid-item">20%</div>        
+      </div>
+    </section>    
+
+
+    <section class="grid-section grid-template">
+      <h2>Unit: em/rem</h2>
+      <div class="grid-container grid-em">
+        <div class="grid-item">20em</div>
+        <div class="grid-item">30em</div>
+      </div>
+    </section>
+
+    <section class="grid-section grid-template">
+      <h2>Unit: min-content</h2>
+      <div class="grid-container grid-min-content">
+        <div class="grid-item">Min</div>
+        <div class="grid-item">LongestUnbreakableWordWithoutSpaces</div>
+      </div>
+    </section>
+
+    <section class="grid-section grid-template">
+      <h2>Unit: min-content - With fixed column size</h2>
+      <div class="grid-container grid-min-content-with-fixed">
+        <div class="grid-item">Min</div>
+        <div class="grid-item">LongestUnbreakableWordWithoutSpaces</div>
+        <div class="grid-item">Column with 200px</div>
+      </div>
+    </section>
+
+
+    <section class="grid-section grid-template">
+      <h2>Unit: max-content</h2>
+      <div class="grid-container grid-max-content">
+        <div class="grid-item">This is a large content cell that wraps</div>
+        <div class="grid-item">Short</div>
+      </div>
+    </section>
+
+    <section class="grid-section grid-template">
+      <h2>Unit: minmax()</h2>
+      <div class="grid-container grid-minmax">
+        <div class="grid-item">Min 100px, Max 1fr</div>
+        <div class="grid-item">Min 100px, Max 1fr</div>
+        <div class="grid-item">Min 100px, Max 1fr</div>
+      </div>
+    </section>
+
+    <section class="grid-section grid-template">
+      <h2>Unit: repeat()</h2>
+      <div class="grid-container grid-repeat">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+      </div>
+    </section>
+
+    <section class="grid-section grid-template">
+      <h2>Unit: fit-content()</h2>
+      <div class="grid-container grid-fit-content">
+        <div class="grid-item">fit-content(200px)</div>
+        <div class="grid-item">Flexible</div>
+      </div>
+    </section>
+
+    <section class="grid-section grid-template">
+      <h2>Only one Fractional column</h2>
+      <div class="grid-container grid-one-fractional-column">
+        <div class="grid-item">It uses the entire width based on it's container <br> It uses the entire width based on it's container</div>
+        <div class="grid-item">Flexible</div>
+      </div>
+    </section>
+    </main>
+</body>
+</html>
