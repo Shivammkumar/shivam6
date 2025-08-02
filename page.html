@@ -84,37 +84,153 @@
   <div class="code-box">
     REVOKE SELECT ON EMP_IND FROM c##SANDHIYA;
   </div>
+  <h3>Revoke All Privileges on a Table</h3>
+    <div class="code-box">
+      <code>REVOKE ALL ON EMP_IND FROM c##SANDHIYA;</code>
+    </div>
 
-</body>
-</html>
+    <h2>5. Granting Public Access (All Users)</h2>
+    <p>Sometimes, companies need to allow all users to view a table.</p>
+
+    <h3>Grant SELECT to All Users</h3>
+    <div class="code-box">
+      <code>GRANT SELECT ON EMP_IND TO PUBLIC;</code>
+    </div>
+
+    <h3>Revoke SELECT from All Users</h3>
+    <div class="code-box">
+      <code>REVOKE SELECT ON EMP_IND FROM PUBLIC;</code>
+    </div>
+
+    <p class="note"><strong>Note:</strong> PUBLIC means every current and future database user.</p>
+    <h2>6. Role–Based Access Control (Efficient Privilege Management)</h2>
+    <p>Roles work like <strong>permission groups</strong> (similar to WhatsApp groups for users).</p>
+
+    <h3>Step 1: Create a Role</h3>
+    <div class="code-box">
+      <code>CREATE ROLE company_reader;</code>
+    </div>
+
+    <h3>Step 2: Grant Privileges to Role</h3>
+    <div class="code-box">
+      <code>GRANT SELECT ON EMP_IND TO company_reader;</code>
+    </div>
+
+    <h3>Step 3: Assign Role to Users</h3>
+    <div class="code-box">
+      <code>GRANT company_reader TO c##SANDHIYA, c##ARUN, c##DIVYA;</code>
+    </div>
+
+    <h3>Step 4: Revoke Role from a User</h3>
+    <div class="code-box">
+      <code>REVOKE company_reader FROM c##DIVYA;</code>
+    </div>
+
+    <p class="note"><strong>Tip:</strong> Roles can also have privileges like <strong>INSERT, UPDATE, and DELETE</strong>:</p>
+    <div class="code-box">
+      <code>GRANT INSERT, UPDATE, DELETE ON EMP_IND TO company_reader;</code>
+    </div>
     
-    </main>
-
-    <aside class="sidebar">
-      <div class="ad-box">
-        <h3>Prompt Engineer Training</h3>
-        <p>Now Only $199 (67% Off)</p>
-        <button>Enroll Today</button>
-      </div>
-
-      <div class="event-box">
-        <h4>Upcoming Events</h4>
-        <ul>
-          <li>Aug 5 - Architecture Conference</li>
-          <li>Aug 31 - Empowering Government</li>
-        </ul>
-      </div>
-
-      <div class="ebook-box">
-        <h4>Ebook Download</h4>
-        <p>Unboxing .NET Aspire</p>
-        <button>Download Now</button>
-      </div>
-      
-
+     <h2>Quick Reference – Privilege Keywords</h2>
     
-    </aside>
+    <table>
+      <thead>
+        <tr>
+          <th>Keyword</th>
+          <th>Meaning</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>SELECT</td><td>Read/view data</td></tr>
+        <tr><td>INSERT</td><td>Add new rows</td></tr>
+        <tr><td>UPDATE</td><td>Modify existing records</td></tr>
+        <tr><td>DELETE</td><td>Remove records</td></tr>
+        <tr><td>REFERENCES</td><td>Define foreign key constraints</td></tr>
+        <tr><td>ALTER</td><td>Change table structure</td></tr>
+        <tr><td>INDEX</td><td>Create indexes</td></tr>
+      </tbody>
+    </table>
+
+    <div class="tip-box">
+      <h3>Security Tip:</h3>
+      <p>Always follow the <strong>Principle of Least Privilege</strong>:</p>
+      <p><span class="highlight">Grant users only the permissions they absolutely need to perform their duties.</span></p>
+      <p>This reduces security risks and prevents unauthorized changes.</p>
+    </div>
+
+    <div class="content">
+
+    <section class="conclusion">
+      <h2>Conclusion</h2>
+      <p>By effectively using <span class="highlight">GRANT</span> and <span class="highlight">REVOKE</span> commands, you can:</p>
+      <ul>
+        <li>Control user access to database objects</li>
+        <li>Enhance security</li>
+        <li>Manage large teams easily through roles</li>
+      </ul>
+    </section>
+
+    <section class="reading">
+      <h3>People also <span class="green">reading</span>.</h3>
+      <ul>
+        <li>Understanding the GRANT and REVOKE Commands in Oracle Database.</li>
+        <li>Role-Based Access Control in Oracle Database.</li>
+        <li>Creating Users and Granting Privileges in Oracle Database.</li>
+        <li>Revoking Privileges from a User in Oracle Database.</li>
+        <li>Granting Public Access in Oracle Database.</li>
+      </ul>
+    </section>
+
+
+
+    <section class="comment-box">
+      <textarea placeholder="Type your comment here and press Enter Key (Minimum 10 characters)"></textarea>
+    </section>
+
+    <footer>
+      <div class="footer-links">
+        <a href="#">About Us</a>
+        <a href="#">Contact Us</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+        <a href="#">Media Kit</a>
+        <a href="#">Partners</a>
+        <a href="#">C# Tutorials</a>
+        <a href="#">FAQs</a>
+        <a href="#">Certifications</a>
+        <a href="#">Ideas</a>
+      </div>
+
+      <div class="footer-icons">
+        <a href="#"><img src="facebook.png" alt="Facebook" /></a>
+        <a href="#"><img src="x.png" alt="X" /></a>
+        <a href="#"><img src="linkedin.png" alt="LinkedIn" /></a>
+        <a href="#"><img src="youtube.png" alt="YouTube" /></a>
+        <a href="#"><img src="windows.png" alt="Windows" /></a>
+        <a href="#"><img src="apple.png" alt="Apple" /></a>
+      </div>
+
+      <p class="copyright">
+        ©2025 C# Corner. All contents are copyright of their authors.
+      </p>
+    </footer>
+    <div class="sidebar">
+    <i class="ri-menu-line"></i>
+    <i class="ri-home-line"></i>
+    <i class="ri-layout-box-line"></i>
+    <i class="ri-wallet-line"></i>
+    <i class="ri-lightbulb-flash-line"></i>
+    <i class="ri-award-line"></i>
+    <i class="ri-user-settings-line"></i>
+    <i class="ri-gift-line"></i>
+    <i class="ri-global-line"></i>
+    <div class="bottom-icon">
+      <i class="ri-pencil-line"></i>
+    </div>
   </div>
-  
+   
+    
+  </div>
+    
 </body>
 </html>
