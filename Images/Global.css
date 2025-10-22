@@ -1,0 +1,938 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f4f6f9;
+  color: #222;
+}
+
+.site-header {
+  background-color: #1a73e8;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.site-footer {
+  background-color: #1a73e8;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.grid-showcase {
+  padding: 20px;
+}
+
+.grid-section {
+  margin-bottom: 40px;
+}
+
+.grid-container {
+  display: grid;
+  gap: 10px;
+  padding: 10px;
+  background-color: #e8f0fe;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  min-width: 300px;
+  max-width: 800px;
+}
+
+/* Display Grid examples */
+.display-grid-example1 {
+  grid-template-columns: 1fr 1fr 3fr 1fr 1fr;
+}
+
+.grid-item {
+  background-color: #1a73e8;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* grid-template-columns examples */
+.cols-fixed {
+  grid-template-columns: 150px 150px 250px 100px;
+}
+.cols-fr {
+  grid-template-columns: 1fr 2fr 1fr;
+}
+.cols-repeat {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* ----------------------------
+   Grid Template Columns Demonstrations
+---------------------------- */
+
+/* Fixed Width Columns using px */
+.grid-px {
+  /* Creates 3 fixed-width columns: 100px, 200px, 100px */
+  grid-template-columns: 100px 200px 100px;
+}
+
+.grid-px-4cols {
+  /* Creates 3 fixed-width columns: 100px, 200px, 100px */
+  grid-template-columns: repeat(4, 100px);
+}
+
+/* Fractional Units using fr */
+.grid-fr {
+  /* Creates 3 columns: first and third take 1 fraction, middle takes 2 */
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+/* Auto Width Columns */
+.grid-auto {
+  /* Columns size based on their content automatically */
+  grid-template-columns: auto auto auto;
+}
+
+/* Percentage Width Columns */
+.grid-percent {
+  /* Two columns that take 50% width of the parent each */
+  grid-template-columns: 50% 50%;
+}
+
+.grid-percent-3cols {
+  /* Three columns that take 25% 50% 25% width within the parent */
+  grid-template-columns: 25% 50% 25%;
+}
+
+.grid-percent-5cols {
+  /* Five columns that take 20% width each - within the parent */
+  grid-template-columns: repeat(5, 20%);
+}
+
+.container-yellow-color {
+  background-color: #ffeb3b; /* Yellow background for visibility */
+}
+
+/* em/rem Units for Typography-based Width */
+.grid-em {
+  /* First column: 20em, second: 30em based on font size */
+  font-size: 12px;
+  grid-template-columns: 20em 30em;
+}
+
+/* Minimum Content Width */
+.grid-min-content {
+  /* First column takes only as much width as needed to fit smallest word */
+  grid-template-columns: min-content auto;
+}
+
+.grid-min-content-with-fixed {
+  /* First column takes only as much width as needed to fit smallest word */
+  grid-template-columns: min-content auto 200px;
+}
+
+/* Maximum Content Width */
+.grid-max-content {
+  /* First column grows to accommodate its longest line before wrapping */
+  grid-template-columns: max-content auto;
+}
+
+/* Responsive Width using minmax() */
+.grid-minmax {
+  /* Each column has min 100px and grows up to share available space */
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+}
+
+/* Repeating Columns with repeat() */
+.grid-repeat {
+  /* Three equal columns using repeat and 1fr unit */
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Fit Content with Maximum Limit */
+.grid-fit-content {
+  /* First column resizes to fit content but maxes out at 200px */
+  grid-template-columns: fit-content(200px) 1fr;
+}
+
+.grid-one-fractional-column {
+  /* First column resizes to fit content but maxes out at 200px */
+  grid-template-columns: 1fr;
+}
+
+/* grid-template-rows examples */
+.rows-fixed {
+  grid-template-rows: 100px 200px 100px;
+}
+
+.rows-fr {
+  grid-template-rows: 1fr 3fr 1fr;
+}
+
+.grid-rows-auto {
+  grid-template-rows: auto auto auto;
+}
+
+/* === grid-template-rows Unit Demonstrations === */
+
+/* Fixed pixel height rows */
+.grid-rows-px {
+  /* Creates 3 rows with fixed pixel heights */
+  grid-template-rows: 100px 150px 200px;
+}
+
+/* Responsive row height using minmax() */
+.grid-rows-minmax {
+  /* Each row has min 100px and can grow up to 1fr */
+  grid-template-rows: minmax(100px, 1fr) minmax(150px, 2fr) minmax(100px, 1fr);
+}
+    
+/* Display Grid examples */
+.display-grid-example {
+  grid-template-columns: repeat(3, 1fr);
+}
+    
+/* Template Columns examples */
+.template-columns-example {
+  display: grid;
+  gap: 10px;
+  background-color: #f4f8fb;
+  padding: 10px;
+  grid-template-columns: repeat(3, 1fr);
+}
+    
+/* Template Rows examples */
+.template-rows-example {
+  display: grid;
+  gap: 10px;
+  background-color: #f4f8fb;
+  padding: 10px;
+  grid-template-columns: repeat(3, 1fr);
+}
+    
+/* Grid Template examples */
+/* === Layout Definitions === */
+
+/* Basic Header/Main/Footer */
+.grid-area-1 .header { grid-area: header; }
+.grid-area-1 .main { grid-area: main; }
+.grid-area-1 .footer { grid-area: footer; }
+
+
+.grid-area-1 {
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: auto 1fr auto;
+}
+
+/* Header, Sidebar, Main */
+.grid-area-2 .header { grid-area: header; }
+.grid-area-2 .sidebar { grid-area: sidebar; }
+.grid-area-2 .main { grid-area: main; }
+
+.grid-area-2 {
+  grid-template-areas:
+    "header header"
+    "sidebar main";
+  grid-template-columns: 1fr 3fr;
+}
+
+/* Dashboard Layout */
+.grid-area-3 .nav { grid-area: nav; }
+.grid-area-3 .main { grid-area: main; }
+.grid-area-3 .aside { grid-area: aside; }
+.grid-area-3 .footer { grid-area: footer; }
+
+.grid-area-3 {
+  grid-template-areas:
+    "nav main aside"
+    "footer footer footer";
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+/* 2x2 Grid with named cells */
+.grid-area-4 {
+  grid-template-areas:
+    "a b"
+    "c d";
+  grid-template-columns: 1fr 1fr;
+}
+.grid-area-4 .a { grid-area: a; }
+.grid-area-4 .b { grid-area: b; }
+.grid-area-4 .c { grid-area: c; }
+.grid-area-4 .d { grid-area: d; }
+
+/* Overlapping header over two columns */
+.grid-area-5 {
+  grid-template-areas:
+    "header header"
+    "left right"
+    "footer footer";
+  grid-template-columns: 1fr 1fr;
+}
+.grid-area-5 .header { grid-area: header; }
+.grid-area-5 .left { grid-area: left; }
+.grid-area-5 .right { grid-area: right; }
+.grid-area-5 .footer { grid-area: footer; }
+
+/* Complex Admin Panel */
+.grid-area-6 {
+  grid-template-areas:
+    "topbar topbar"
+    "menu content"
+    "menu widgets"
+    "footer footer";
+  grid-template-columns: 1fr 3fr;
+}
+.grid-area-6 .topbar { grid-area: topbar; }
+.grid-area-6 .menu { grid-area: menu; }
+.grid-area-6 .content { grid-area: content; }
+.grid-area-6 .widgets { grid-area: widgets; }
+.grid-area-6 .footer { grid-area: footer; }
+    
+/* ========== grid-auto-columns ========== */
+/* Applies when more rows are created than columns defined */
+.auto-columns-example {
+  grid-template-columns: 300px;
+  grid-template-rows: repeat(3, 100px); /* 3 rows defined */
+  grid-auto-flow: column; 
+  grid-auto-columns: 150px; /* Every implicit column will be 150px wide */
+}
+
+/* ========== grid-auto-rows ========== */
+/* Applies when more rows are added than defined */
+.auto-rows-example {
+  grid-template-columns: repeat(3, 1fr); /* 3 columns defined */
+  grid-template-rows: repeat(2, 1fr); /* 2 rows defined */
+  grid-auto-rows: 80px; /* All new rows will be 80px high */
+}
+
+/* ========== 1. grid-auto-flow: row ========== */
+/* Fills rows first (left to right, then top to bottom) */
+.auto-flow-row {
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 80px;
+  grid-auto-flow: row;
+}
+
+/* ========== 2. grid-auto-flow: column ========== */
+/* Fills columns first (top to bottom, then next column) */
+.auto-flow-column {
+  grid-template-rows: repeat(3, 80px);
+  grid-auto-columns: 100px;
+  grid-auto-flow: column;
+}
+
+/* Large item that spans 2 columns to create a gap */
+.item-large {
+  grid-column: span 2;
+}
+    
+/* === Grid Area Item Assignments === */
+.item-header { grid-area: header; }
+.item-main { grid-area: main; }
+.item-sidebar { grid-area: sidebar; }
+.item-footer { grid-area: footer; }
+
+/* === Grid Area Layout Variants === */
+
+/* Layout 1: Sidebar Right, Footer at Bottom */
+.grid-layout-1 {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "main main sidebar"
+    "footer footer footer";
+  grid-template-columns: 2fr 2fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  gap: 2px;
+}
+
+/* Layout 2: Sidebar Left, Footer shares last row */
+.grid-layout-2 {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "sidebar main main"
+    "sidebar footer footer";
+  grid-template-columns: 1fr 2fr 2fr;
+  grid-template-rows: auto 1fr auto;
+  gap: 10px;
+}
+
+/* Layout 3: No Footer, Sidebar occupies 2 rows */
+.grid-layout-3 {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "sidebar main main"
+    "sidebar main main";
+  grid-template-columns: 1fr 2fr 2fr;
+  grid-template-rows: auto 1fr 1fr;
+  gap: 10px;
+}
+
+/* Layout 4: Main expands vertically with sidebar fixed */
+.grid-layout-4 {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "main main sidebar"
+    "main main sidebar";
+  grid-template-columns: 2fr 2fr 1fr;
+  grid-template-rows: auto 1fr 1fr;
+  gap: 10px;
+}
+
+/* Layout 5: No Sidebar */
+.grid-layout-5 {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "main main main"
+    "footer footer footer";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  gap: 10px;
+}
+
+/* Layout 6: Sidebar in Footer Row */
+.grid-layout-6 {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "main main main"
+    "footer footer sidebar";
+  grid-template-columns: 2fr 2fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  gap: 10px;
+}
+
+
+/* === Named Line Grid Layout === */
+.grid-container-line-names {
+  display: grid;
+  gap: 5px;
+  grid-template-columns: [col1-start] 80% [col1-end col2-start] 20% [col2-end];
+  grid-template-rows: [header-start] 20% [header-end main-start] 50% [main-end footer-start] 30% [footer-end];
+  box-sizing: content-box;
+  padding: 10px;
+}
+
+.grid-item-header-named {
+  grid-row: header-start / header-end;
+  grid-column: col1-start / col2-end;
+}
+
+.grid-item-main-named {
+  grid-row: main-start / main-end;
+  grid-column: col1-start / col1-end;
+}
+
+.grid-item-sidebar-named {
+  grid-row: main-start / main-end;
+  grid-column: col2-start / col2-end;
+}
+
+.grid-item-footer-named {
+  grid-row: footer-start / footer-end;
+  grid-column: col1-start / col2-end;
+}
+
+/* === Numbered Line Grid Layout === */
+.grid-container-line-numbers {
+  display: grid;
+  height: 90vh;
+  margin: 30px;
+  gap: 5px;
+  grid-template-columns: 80% 20%;
+  grid-template-rows: 20% 50% 30%;
+  box-sizing: content-box;
+}
+.grid-item-header-number {
+  background-color: yellowgreen;
+  grid-row: 1 / 2;
+  grid-column: 1 / -1;
+}
+.grid-item-main-number {
+  background-color: lime;
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+}
+.grid-item-sidebar-number {
+  background-color: indigo;
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+}
+.grid-item-footer-number {
+  background-color: skyblue;
+  grid-row: 3 / 4;
+  grid-column: 1 / 3;
+}
+
+/* === Start/End Grid with Named Lines === */
+.grid-container-line-names-start-end {
+  display: grid;
+  height: 90vh;
+  gap: 15px;
+  margin: 40px;
+  grid-template-columns: [col1-start] 80% [col1-end col2-start] 20% [col2-end];
+  grid-template-rows: [header-start] 20% [header-end main-start] 50% [main-end footer-start] 30% [footer-end];
+}
+.grid-item-header-start-end {
+  background-color: blue;
+  grid-row-start: header-start;
+  grid-row-end: header-end;
+  grid-column-start: col1-start;
+  grid-column-end: col2-end;
+}
+.grid-item-main-start-end {
+  background-color: green;
+  grid-row-start: main-start;
+  grid-row-end: main-end;
+  grid-column-start: col1-start;
+  grid-column-end: col1-end;
+}
+.grid-item-sidebar-start-end {
+  background-color: goldenrod;
+  grid-row-start: main-start;
+  grid-row-end: main-end;
+  grid-column-start: col2-start;
+  grid-column-end: col2-end;
+}
+.grid-item-footer-start-end {
+  background-color: violet;
+  grid-row-start: footer-start;
+  grid-row-end: footer-end;
+  grid-column-start: col1-start;
+  grid-column-end: col2-end;
+}
+
+/* === Separate Row & Column Gaps === */
+.grid-container-row-column-gap {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 100px 200px 150px;
+  grid-row-gap: 10px;
+  grid-column-gap: 20px;
+  margin: 40px;
+}
+/*
+.grid-item {
+  background-color: #ff8c00;
+}*/
+
+/* === Grid Positioning and Spanning === */
+.grid-container-position-span {
+  display: grid;
+  grid-template-columns: 30% 30% 40%;
+  grid-template-rows: repeat(2, 1fr) 2fr 2fr 2fr 2fr 2fr;
+  gap: 10px;
+  margin: 20px;
+}
+/* Grid Item Positioning */
+/* spanning row 1 to 2, column 1 to 2 */
+.grid-item-1-1 {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  background-color: lightblue;
+}
+.grid-item-2-3 {
+  grid-row: 2 / 3;
+  grid-column: 3 / 4;
+  background-color: tomato;
+}
+.grid-item-3-2 {
+  grid-row: 3 / 4;
+  grid-column: 2 / 3;
+  background-color: steal;
+}
+.grid-item-area-2-2 {
+  /* Spans from row start, column start, row end, column end - row 2 to 4, column 2 to 3 */
+  grid-area: 4 / 2 / 6 / 3;
+  background-color: green;
+}
+.grid-span-row-1-cols-2 {
+  grid-row: 6 / 7;
+  grid-column: 1 / 3;
+  background-color: steelblue;
+}
+.grid-span-cols-2-3 {
+  grid-column: 2 / -1;
+  background-color: sienna;
+}
+.grid-span-row-3-cols-1 {
+  grid-row: 7 / 9;
+  grid-column: 2 / 3;
+  background-color: brown;
+}
+.grid-span-2x2 {
+  grid-row: 7 / 9;
+  grid-column: 1 / 3;
+  background-color: coral;
+}
+.grid-span-area {
+  grid-area: 4 / 3 / 6 / 4;
+  background-color: darkslateblue;
+}
+.grid-span-last-row {
+  grid-area: 13 / 1 / 14 / span 3;
+  background-color: purple;
+}
+
+
+/* === Common Grid Item Styling === */
+.grid-box {
+  background-color: #1a73e8;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+/* Grid Column examples */
+.grid-column-example {
+  display: grid;
+  gap: 10px;
+  background-color: #f4f8fb;
+  padding: 10px;
+  grid-template-columns: repeat(3, 1fr);
+}
+    
+/* Grid Row examples */
+.grid-row-example {
+  display: grid;
+  gap: 10px;
+  background-color: #f4f8fb;
+  padding: 10px;
+  grid-template-columns: repeat(3, 1fr);
+}
+    
+/* 3 columns x 4 rows for demonstration grid */
+.grid-cols-3-rows-4 {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+/* Grid positioning demonstration classes */
+.col-span-2 {
+  grid-column-start: 1;
+  grid-column-end: 3;    /* Spans columns 1 & 2 */
+}
+
+.row-span-2 {
+  grid-row-start: 2;
+  grid-row-end: 4;       /* Spans rows 2 & 3 */
+}
+
+.col-start-2 {
+  grid-column-start: 2;
+  grid-column-end: 3;    /* Occupies only column 2 */
+}
+
+.row-start-3 {
+  grid-row-start: 3;
+  grid-row-end: 4;       /* Occupies only row 3 */
+}
+    
+/* 3 columns grid */
+.grid-cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Justify-items helpers */
+.grid-justify-items-start {
+  justify-items: start;
+}
+.grid-justify-items-center {
+  justify-items: center;
+}
+.grid-justify-items-end {
+  justify-items: end;
+}
+.grid-justify-items-stretch {
+  justify-items: stretch;
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Make row(s) tall so vertical alignment is obvious */
+.grid-row-tall {
+  grid-template-rows: 120px;   /* Make single row tall for clear vertical alignment */
+}
+
+/* align-items helpers */
+.grid-align-items-start {
+  align-items: start;
+}
+.grid-align-items-center {
+  align-items: center;
+}
+.grid-align-items-end {
+  align-items: end;
+}
+.grid-align-items-stretch {
+  align-items: stretch;
+}
+
+/* Add a margin to separate grids */
+.grid-container:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Make row(s) tall so vertical alignment is obvious */
+.grid-row-tall {
+  grid-template-rows: 120px;   /* Tall row for alignment demo */
+}
+
+/* place-items helpers */
+.grid-place-items-start-center {
+  place-items: start center;   /* align-items: start; justify-items: center */
+}
+.grid-place-items-end-start {
+  place-items: end start;      /* align-items: end; justify-items: start */
+}
+.grid-place-items-center-center {
+  place-items: center center;  /* align-items: center; justify-items: center */
+}
+.grid-place-items-stretch-stretch {
+  place-items: stretch stretch; /* align-items: stretch; justify-items: stretch */
+}
+    
+/* Slide 19: Justify Content examples */
+.grid-cols-3 {
+  grid-template-columns: repeat(3, 120px); /* Fixed width to create extra space for justification */
+}
+
+/* Justify-content helpers */
+.grid-justify-content-start {
+  justify-content: start;
+}
+.grid-justify-content-center {
+  justify-content: center;
+}
+.grid-justify-content-end {
+  justify-content: end;
+}
+.grid-justify-content-space-around {
+  justify-content: space-around;
+}
+.grid-justify-content-space-between {
+  justify-content: space-between;
+}
+.grid-justify-content-space-evenly {
+  justify-content: space-evenly;
+}
+    
+/* Align Content examples */
+.grid-cols-3 {
+  grid-template-columns: repeat(3, 250px); /* Fixed width for visibility */
+}
+
+.grid-cols-3-120px {
+  grid-template-columns: repeat(3, 120px); /* Fixed width for visibility */
+}
+
+/* Small rows to create vertical extra space in container */
+.grid-rows-small {
+  grid-template-rows: repeat(2, 50px); /* Two short rows */
+  min-height: 200px;           
+}
+
+/* Align-content helpers */
+.grid-align-content-start {
+  align-content: start;
+}
+.grid-align-content-center {
+  align-content: center;
+}
+.grid-align-content-end {
+  align-content: end;
+}
+.grid-align-content-space-around {
+  align-content: space-around;
+}
+.grid-align-content-space-between {
+  align-content: space-between;
+}
+.grid-align-content-space-evenly {
+  align-content: space-evenly;
+}
+
+/* place-content helpers */
+.grid-place-content-start-center {
+  place-content: start center;   /* align-content: start; justify-content: center */
+}
+
+.grid-place-content-center-center {
+  place-content: center center;   /* align-content: center; justify-content: center */
+}
+
+.grid-place-content-end-end {
+  place-content: end end;   /* align-content: end; justify-content: end */
+}
+
+/* Justify Self examples */
+.js-demo-grid-vertical {
+  display: grid;
+  grid-template-columns: 300px;   /* One wide column */
+  grid-template-rows: repeat(4, 60px); /* Four rows */
+  gap: 18px;
+  padding: 18px;
+  background-color: #e8f0fe;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  max-width: 360px;
+  margin: 0 auto 32px auto;
+  border-radius: 10px;
+}
+
+.js-demo-item {
+  background-color: #1a73e8;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1em;
+  text-align: center;
+  border-radius: 8px;
+  min-height: 40px;
+  min-width: 40px;
+  padding: 10px 0;
+  border: 2px dashed #fff;
+  box-sizing: border-box;
+}
+
+.js-justify-self-start {
+  justify-self: start;
+  width: 100px;
+}
+.js-justify-self-center {
+  justify-self: center;
+  width: 100px;
+}
+.js-justify-self-end {
+  justify-self: end;
+  width: 100px;
+}
+.js-justify-self-stretch {
+  justify-self: stretch;
+  width: auto;
+}
+
+    
+/* Align Self examples */
+.align-self-demo-grid {
+  display: grid;
+  grid-template-columns: 220px;           /* Single column grid */
+  grid-template-rows: repeat(4, 100px);   /* Four tall rows */
+  gap: 18px;
+  padding: 18px;
+  background-color: #e8f0fe;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  max-width: 300px;
+  margin: 0 auto 32px auto;
+  border-radius: 10px;
+}
+
+/* Each grid cell gets a dashed border for clarity */
+.align-self-demo-cell {
+  border: 2px dashed #90caf9;
+  height: 100px;
+  position: relative;
+  display: flex;               /* To horizontally center the demo item in the cell */
+  justify-content: center;
+  box-sizing: border-box;
+  background-color: transparent;
+}
+
+/* The demo item itself */
+.align-self-demo-item {
+  background-color: #1a73e8;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.05em;
+  text-align: center;
+  border-radius: 8px;
+  width: 80px;
+  min-height: 28px;
+  border: 2px solid #fff;
+  box-sizing: border-box;
+  /* Remove display:flex from here—alignment is by grid, not by flex */
+}
+
+/* Alignment classes for the demo item */
+.align-self-start {
+  align-self: start;
+}
+.align-self-center {
+  align-self: center;
+}
+.align-self-end {
+  align-self: end;
+}
+.align-self-stretch {
+  align-self: stretch;
+  min-height: 0;   /* Allows stretching fully */
+  height: auto;    /* Let the grid row define the height */
+  align-items: center;
+  justify-content: center;
+}
+
+    
+/* Place Self examples */
+.place-self-demo-grid {
+  display: grid;
+  grid-template-columns: 220px;
+  grid-template-rows: repeat(4, 100px);
+  gap: 10px; /* No gap, so border sits on cell boundary */
+  padding: 18px;
+  background-color: #e8f0fe;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  max-width: 300px;
+  border-radius: 10px;
+  position: relative;
+}
+
+/* Pseudo-element for row border, applied to each direct child (grid item) */
+.place-self-demo-item {
+  position: relative;
+  background-color: #1a73e8;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1em;
+  text-align: center;
+  border-radius: 8px;
+  width: 120px;
+  min-height: 28px;
+  box-sizing: border-box;
+  padding:5px;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* Place-self values */
+.place-self-start-center {
+  place-self: start center;
+}
+.place-self-center-end {
+  place-self: center end;
+}
+.place-self-end-start {
+  place-self: end start;
+}
+.place-self-stretch-stretch {
+  place-self: stretch stretch;
+  width: 100%;   
+  height: 100%;  
+}

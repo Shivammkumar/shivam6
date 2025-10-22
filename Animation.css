@@ -1,0 +1,391 @@
+body {
+  background-color: lightblue;
+}
+
+/* ------------------------------------------- */
+/* Keyframe: Change background color            */
+/* What is Keyframe? */
+/* Keyframes define the styles at various points during an animation sequence. 
+   They allow you to create complex animations by specifying different styles at different times. */
+@keyframes changeColorMinimumPropertyRequired {
+  from {
+    background-color: red;
+  }
+  to {
+    background-color: blue;
+  }
+}
+
+/* Only animation-name and animation-duration are used */
+.changeColorMinimumPropertyRequired {
+  margin: 30px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  animation-name: changeColorMinimumPropertyRequired;
+  animation-duration: 10s;
+}
+
+/* ------------------------------------------- */
+/* Keyframe: Linear color change */
+@keyframes changeColor {
+  from {
+    background-color: red;
+  }
+  to {
+    background-color: blue;
+  }
+}
+
+/* Animation with linear timing */
+.changeColorTimingOutLinear {
+  margin: 30px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  animation-name: changeColor;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+}
+
+/* Animation starts after delay */
+.changeColorAnimationDelay {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  animation-name: changeColor;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-delay: 5s;
+  margin: 30px;
+}
+
+/* Animation runs 3 times */
+.changeColorIterationCountThreeTimes {
+  width: 300px;
+  height: 300px;
+  margin: 30px;
+  border-radius: 50%;
+  animation-name: changeColor;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 3;
+}
+
+/* Infinite color animation */
+.changeColorIterationCountInfinite {
+  width: 400px;
+  height: 400px;
+  margin: 30px;
+  /* border-radius: 50%; */
+  animation-name: changeColor;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* ------------------------------------------- */
+/* Keyframe: Translate right in steps */
+@keyframes moveRight {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(300px);
+  }
+}
+
+/* Normal direction */
+.circleAnimationDirectionNormal {
+  width: 200px;
+  height: 200px;
+  margin: 30px;
+  border-radius: 50%;
+  background-color: yellow;
+  animation-name: moveRight;
+  animation-duration: 3s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+
+/* Reverse direction */
+.circleAnimationDirectionReverse {
+  width: 200px;
+  height: 200px;
+  margin: 30px;
+  background-color: rgb(17, 5, 190);
+  border-radius: 50%;
+  animation-name: moveRight;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+}
+
+/* Alternate direction */
+.circleAnimationDirectionAlternate {
+  width: 200px;
+  height: 200px;
+  margin: 30px;
+  background-color: purple;
+  border-radius: 50%;
+  animation-name: moveRight;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+/* Alternate-reverse direction */
+.circleAnimationDirectionAlternateReverse {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  border-radius: 50%;
+  animation-name: moveRight;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  margin: 30px;
+}
+
+/* Fill mode: forwards */
+.circleAnimationFillModeForward {
+  width: 200px;
+  height: 200px;
+  background-color: pink;
+  border-radius: 50%;
+  animation-name: moveRight;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  margin: 30px;
+}
+
+/* Fill mode: backwards */
+.circleAnimationFillModeBackwards {
+  width: 200px;
+  height: 200px;
+  background-color: violet;
+  border-radius: 50%;
+  animation-name: changeColor;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-delay: 3s;
+  animation-fill-mode: backwards;
+  margin: 30px;
+}
+
+/* Utility class for demonstration blocks with clear structure */
+.animation-fill-example {
+  width: 200px;
+  height: 200px;
+  margin: 30px;
+  line-height: 200px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+}
+
+/* Fill mode: none - resets to original color after animation */
+.animationFillModeNone {
+  background-color: green;
+  animation-name: changeColor;
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-fill-mode: none;
+  animation-timing-function: ease-in-out;
+}
+
+/* Fill mode: both - retains red during delay and blue after animation ends */
+.animationFillModeBoth {
+  background-color: green;
+  animation-name: changeColor;
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+
+/* Shorthand animation with transform */
+.square {
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  animation: moveRight 2s ease-in-out infinite;
+  margin: 30px;
+}
+
+@keyframes moveCircle {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(500px);
+  }
+}
+
+/* Circle moves right using shorthand */
+.circle {
+  width: 200px;
+  height: 200px;
+  background-color: greenyellow;
+  border-radius: 50%;
+  animation: moveCircle 10s ease-in-out infinite;
+  margin: 30px;
+}
+
+/* Shorthand with changeColor keyframe */
+.changeColor {
+  width: 200px;
+  height: 200px;
+  background-color: greenyellow;
+  border-radius: 50%;
+  animation: changeColor 2s ease-in-out infinite;
+  margin: 30px;
+}
+
+@keyframes changeColorAndMove {
+  from {
+    background-color: rgb(102, 47, 255);
+    transform: translateX(0);
+  }
+  to {
+    background-color: brown;
+    transform: translateX(300px);
+  }
+}
+
+/* Color and movement combined */
+.changeColorAndMove {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  animation: changeColorAndMove 2s ease-in-out infinite;
+  margin: 30px;
+}
+
+/* Animation starts only on hover */
+.box {
+  background-color: rebeccapurple;
+  border-radius: 10px;
+  width: 100px;
+  height: 100px;
+  animation-name: rotate;
+  animation-duration: 0.7s;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+  margin: 30px;
+}
+
+.box:hover {
+  animation-play-state: running;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Multiple animations applied together */
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scale {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
+}
+
+.multiAnimation {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  animation: fade 2s ease-in-out infinite, scale 2s ease-in-out infinite;
+  margin: 80px;
+}
+
+/* Animation with step timing function */
+@keyframes stepMove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(200px);
+  }
+}
+
+/* 
+  Applies a step-based horizontal movement animation.
+  The animation moves the element from left to right using 5 discrete jumps (steps).
+  Each jump occurs every 0.4 seconds (2s / 5).
+  The 'end' keyword ensures the visual jump happens at the end of each step interval.
+  Useful to simulate robotic or slide-transition-like animations.
+*/
+.stepExample {
+  width: 100px;
+  height: 100px;
+  background-color: teal;
+  animation: stepMove 5s steps(5, end) infinite;
+  margin: 80px;
+}
+
+/* Bounce and fade in combined keyframes */
+@keyframes bounceAndFade {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-100px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.bounceFadeBox {
+  width: 100px;
+  height: 100px;
+  background-color: darkorange;
+  animation: bounceAndFade 3s ease-in-out infinite;
+  margin: 130px;
+}
+
+/* Real life example: Loading spinner */
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loader {
+  width: 40px;
+  height: 40px;
+  border: 4px solid lightgray;
+  border-top: 4px solid navy;
+  border-radius: 50%;
+  animation: spinner 1s linear infinite;
+  margin: 30px;
+}

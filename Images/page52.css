@@ -360,7 +360,7 @@ footer {
   width: 22px;
   margin: 0 6px;
   vertical-align: middle;
-  filter: brightness(0) invert(1);
+  filter: brightness(-8) invert(1);
 }
 
 footer p {
@@ -433,7 +433,47 @@ footer p {
   color: #0f172a;
 }
   
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 100%;
+  background-color: #2a3142;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+}
 
+.sidebar a {
+  text-decoration: none;
+  color: #ccc;
+  font-size: 20px;
+  margin: 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  background: #3a4256;
+  color: #fff;
+}
+
+.sidebar a.active {
+  background: #008cff;
+  color: #fff;
+}
+
+.bottom {
+  margin-top: auto;
+  margin-bottom: 20px;
+}
 
   
     
