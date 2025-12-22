@@ -12,13 +12,13 @@ let res =nums.every((num)=>num <100);
 console.log(res);
 res= nums.every((num)=>num<10);
 console.log(res);*/
-/*nums= [3,5,6,4,5,6,46,7,8,5,6,7,5];
+nums= [3,5,6,4,5,6,46,7,8,5,6,7,5];
 res =nums.some ((num)=>num >40);
 console.log(res);
 res=nums.some((num)=>num>100);
-console.log(res);*/
-nums=[3,5,6,4,5,6,46,7,8,5,6,7,5];
+console.log(res);
+/*nums=[3,5,6,4,5,6,46,7,8,5,6,7,5];
 let foundValue=nums.find((num)=>num>10);
 console.log(foundvalue);
 foundValue=nums.find((num)=>num>50);
-console.log(foundValue);
+console.log(foundValue);*/
